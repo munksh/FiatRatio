@@ -1,0 +1,725 @@
+{
+ "languages": [
+  "en",
+  "sv",
+  "de",
+  "ru"
+ ],
+ "maintained": {
+  "en": "author",
+  "sv": "author",
+  "de": "community",
+  "ru": "community"
+ },
+ "buckets": {
+  "needs": {
+   "en": "Needs",
+   "sv": "Behov",
+   "de": "Bedarf",
+   "ru": "Необходимое"
+  },
+  "wants": {
+   "en": "Wants",
+   "sv": "Önskemål",
+   "de": "Wünsche",
+   "ru": "Желания"
+  },
+  "savings": {
+   "en": "Savings",
+   "sv": "Sparande",
+   "de": "Sparen",
+   "ru": "Сбережения"
+  },
+  "technical": {
+   "en": "Technical",
+   "sv": "Tekniskt",
+   "de": "Technisches",
+   "ru": "Технические"
+  },
+  "exceptional": {
+   "en": "Exceptional",
+   "sv": "Oförutsett",
+   "de": "Außergewöhnlich",
+   "ru": "Непредвиденное"
+  }
+ },
+ "categories": {
+  "food": {
+   "kind": "expense",
+   "parent": null,
+   "bucket": "needs",
+   "en": "Food",
+   "sv": "Mat",
+   "de": "Essen",
+   "ru": "Еда"
+  },
+  "groceries": {
+   "kind": "expense",
+   "parent": "food",
+   "bucket": "needs",
+   "en": "Groceries",
+   "sv": "Livsmedel",
+   "de": "Lebensmittel",
+   "ru": "Продукты"
+  },
+  "restaurant": {
+   "kind": "expense",
+   "parent": "food",
+   "bucket": "wants",
+   "en": "Restaurants",
+   "sv": "Restaurang",
+   "de": "Restaurant",
+   "ru": "Рестораны"
+  },
+  "fika": {
+   "kind": "expense",
+   "parent": "food",
+   "bucket": "wants",
+   "en": "Coffee and fika",
+   "sv": "Fika",
+   "de": "Kaffee und Kuchen",
+   "ru": "Кофе и перекусы"
+  },
+  "snacks": {
+   "kind": "expense",
+   "parent": "food",
+   "bucket": "wants",
+   "en": "Snacks and fast food",
+   "sv": "Snacks och snabbmat",
+   "de": "Snacks und Fast Food",
+   "ru": "Снеки и фастфуд"
+  },
+  "alcohol": {
+   "kind": "expense",
+   "parent": "food",
+   "bucket": "wants",
+   "en": "Alcohol",
+   "sv": "Alkohol",
+   "de": "Alkohol",
+   "ru": "Алкоголь"
+  },
+  "home": {
+   "kind": "expense",
+   "parent": null,
+   "bucket": "needs",
+   "en": "Home",
+   "sv": "Boende",
+   "de": "Wohnen",
+   "ru": "Жильё"
+  },
+  "rent": {
+   "kind": "expense",
+   "parent": "home",
+   "bucket": "needs",
+   "en": "Rent",
+   "sv": "Hyra",
+   "de": "Miete",
+   "ru": "Аренда"
+  },
+  "housing": {
+   "kind": "expense",
+   "parent": "home",
+   "bucket": "needs",
+   "en": "Housing costs",
+   "sv": "Boendekostnader",
+   "de": "Wohnnebenkosten",
+   "ru": "Коммунальные расходы"
+  },
+  "mortgage_interest": {
+   "kind": "expense",
+   "parent": "home",
+   "bucket": "needs",
+   "en": "Mortgage interest",
+   "sv": "Ränta på bolån",
+   "de": "Hypothekenzinsen",
+   "ru": "Проценты по ипотеке"
+  },
+  "household": {
+   "kind": "expense",
+   "parent": "home",
+   "bucket": "needs",
+   "en": "Household",
+   "sv": "Hushåll",
+   "de": "Haushalt",
+   "ru": "Хозяйство"
+  },
+  "maintenance": {
+   "kind": "expense",
+   "parent": "home",
+   "bucket": "needs",
+   "en": "Maintenance",
+   "sv": "Underhåll",
+   "de": "Instandhaltung",
+   "ru": "Обслуживание"
+  },
+  "repairs": {
+   "kind": "expense",
+   "parent": "home",
+   "bucket": "needs",
+   "en": "Repairs",
+   "sv": "Reparationer",
+   "de": "Reparaturen",
+   "ru": "Ремонт"
+  },
+  "renovation": {
+   "kind": "expense",
+   "parent": "home",
+   "bucket": "wants",
+   "en": "Renovation",
+   "sv": "Renovering",
+   "de": "Renovierung",
+   "ru": "Обновление жилья"
+  },
+  "garden": {
+   "kind": "expense",
+   "parent": "home",
+   "bucket": "wants",
+   "en": "Garden",
+   "sv": "Trädgård",
+   "de": "Garten",
+   "ru": "Сад"
+  },
+  "transport": {
+   "kind": "expense",
+   "parent": null,
+   "bucket": "needs",
+   "en": "Transport",
+   "sv": "Transport",
+   "de": "Verkehr",
+   "ru": "Транспорт"
+  },
+  "transport_public": {
+   "kind": "expense",
+   "parent": "transport",
+   "bucket": "needs",
+   "en": "Public transport",
+   "sv": "Kollektivtrafik",
+   "de": "Öffentlicher Verkehr",
+   "ru": "Общественный транспорт"
+  },
+  "transport_car": {
+   "kind": "expense",
+   "parent": "transport",
+   "bucket": "needs",
+   "en": "Car",
+   "sv": "Bil",
+   "de": "Auto",
+   "ru": "Автомобиль"
+  },
+  "fuel": {
+   "kind": "expense",
+   "parent": "transport",
+   "bucket": "needs",
+   "en": "Fuel",
+   "sv": "Drivmedel",
+   "de": "Kraftstoff",
+   "ru": "Топливо"
+  },
+  "parking": {
+   "kind": "expense",
+   "parent": "transport",
+   "bucket": "needs",
+   "en": "Parking",
+   "sv": "Parkering",
+   "de": "Parken",
+   "ru": "Парковка"
+  },
+  "taxi": {
+   "kind": "expense",
+   "parent": "transport",
+   "bucket": "wants",
+   "en": "Taxi",
+   "sv": "Taxi",
+   "de": "Taxi",
+   "ru": "Такси"
+  },
+  "transport_fees": {
+   "kind": "expense",
+   "parent": "transport",
+   "bucket": "needs",
+   "en": "Tolls and fees",
+   "sv": "Avgifter och tullar",
+   "de": "Gebühren und Maut",
+   "ru": "Сборы и пошлины"
+  },
+  "travel": {
+   "kind": "expense",
+   "parent": null,
+   "bucket": "wants",
+   "en": "Travel",
+   "sv": "Resor",
+   "de": "Reisen",
+   "ru": "Путешествия"
+  },
+  "travel_flights": {
+   "kind": "expense",
+   "parent": "travel",
+   "bucket": "wants",
+   "en": "Flights",
+   "sv": "Flyg",
+   "de": "Flüge",
+   "ru": "Авиабилеты"
+  },
+  "travel_train": {
+   "kind": "expense",
+   "parent": "travel",
+   "bucket": "wants",
+   "en": "Train",
+   "sv": "Tåg",
+   "de": "Bahn",
+   "ru": "Поезд"
+  },
+  "travel_bus": {
+   "kind": "expense",
+   "parent": "travel",
+   "bucket": "wants",
+   "en": "Bus",
+   "sv": "Buss",
+   "de": "Bus",
+   "ru": "Автобус"
+  },
+  "travel_boat": {
+   "kind": "expense",
+   "parent": "travel",
+   "bucket": "wants",
+   "en": "Boat",
+   "sv": "Båt",
+   "de": "Schiff",
+   "ru": "Паром"
+  },
+  "travel_hotel": {
+   "kind": "expense",
+   "parent": "travel",
+   "bucket": "wants",
+   "en": "Accommodation",
+   "sv": "Boende på resa",
+   "de": "Unterkunft",
+   "ru": "Проживание"
+  },
+  "travel_fees": {
+   "kind": "expense",
+   "parent": "travel",
+   "bucket": "wants",
+   "en": "Travel fees",
+   "sv": "Reseavgifter",
+   "de": "Reisegebühren",
+   "ru": "Сборы в поездке"
+  },
+  "health": {
+   "kind": "expense",
+   "parent": null,
+   "bucket": "needs",
+   "en": "Health",
+   "sv": "Hälsa",
+   "de": "Gesundheit",
+   "ru": "Здоровье"
+  },
+  "health_medical": {
+   "kind": "expense",
+   "parent": "health",
+   "bucket": "needs",
+   "en": "Healthcare and medicine",
+   "sv": "Vård och medicin",
+   "de": "Arzt und Medizin",
+   "ru": "Медицина"
+  },
+  "hygiene": {
+   "kind": "expense",
+   "parent": "health",
+   "bucket": "needs",
+   "en": "Hygiene",
+   "sv": "Hygien",
+   "de": "Hygiene",
+   "ru": "Гигиена"
+  },
+  "sports": {
+   "kind": "expense",
+   "parent": "health",
+   "bucket": "needs",
+   "en": "Sports and fitness",
+   "sv": "Sport och träning",
+   "de": "Sport und Fitness",
+   "ru": "Спорт"
+  },
+  "leisure": {
+   "kind": "expense",
+   "parent": null,
+   "bucket": "wants",
+   "en": "Leisure",
+   "sv": "Fritid",
+   "de": "Freizeit",
+   "ru": "Досуг"
+  },
+  "entertainment": {
+   "kind": "expense",
+   "parent": "leisure",
+   "bucket": "wants",
+   "en": "Entertainment and streaming",
+   "sv": "Nöje och streaming",
+   "de": "Unterhaltung und Streaming",
+   "ru": "Развлечения и подписки"
+  },
+  "hobbies": {
+   "kind": "expense",
+   "parent": "leisure",
+   "bucket": "wants",
+   "en": "Hobbies",
+   "sv": "Hobbyer",
+   "de": "Hobbys",
+   "ru": "Хобби"
+  },
+  "books": {
+   "kind": "expense",
+   "parent": "leisure",
+   "bucket": "wants",
+   "en": "Books",
+   "sv": "Böcker",
+   "de": "Bücher",
+   "ru": "Книги"
+  },
+  "education": {
+   "kind": "expense",
+   "parent": "leisure",
+   "bucket": "wants",
+   "en": "Education",
+   "sv": "Utbildning",
+   "de": "Bildung",
+   "ru": "Образование"
+  },
+  "gambling": {
+   "kind": "expense",
+   "parent": "leisure",
+   "bucket": "wants",
+   "en": "Gambling",
+   "sv": "Spel",
+   "de": "Glücksspiel",
+   "ru": "Азартные игры"
+  },
+  "social_club": {
+   "kind": "expense",
+   "parent": "leisure",
+   "bucket": "wants",
+   "en": "Clubs and societies",
+   "sv": "Föreningar",
+   "de": "Vereine",
+   "ru": "Клубы и общества"
+  },
+  "shopping": {
+   "kind": "expense",
+   "parent": null,
+   "bucket": "wants",
+   "en": "Shopping",
+   "sv": "Shopping",
+   "de": "Einkäufe",
+   "ru": "Покупки"
+  },
+  "clothes": {
+   "kind": "expense",
+   "parent": "shopping",
+   "bucket": "wants",
+   "en": "Clothes",
+   "sv": "Kläder",
+   "de": "Kleidung",
+   "ru": "Одежда"
+  },
+  "computer_phone": {
+   "kind": "expense",
+   "parent": "shopping",
+   "bucket": "needs",
+   "en": "Computer and phone",
+   "sv": "Dator och telefon",
+   "de": "Computer und Telefon",
+   "ru": "Компьютер и телефон"
+  },
+  "it": {
+   "kind": "expense",
+   "parent": "shopping",
+   "bucket": "wants",
+   "en": "Software and services",
+   "sv": "Programvara och tjänster",
+   "de": "Software und Dienste",
+   "ru": "Программы и сервисы"
+  },
+  "tech": {
+   "kind": "expense",
+   "parent": "shopping",
+   "bucket": "wants",
+   "en": "Electronics",
+   "sv": "Elektronik",
+   "de": "Elektronik",
+   "ru": "Электроника"
+  },
+  "giving": {
+   "kind": "expense",
+   "parent": null,
+   "bucket": "wants",
+   "en": "Giving",
+   "sv": "Gåvor",
+   "de": "Schenken",
+   "ru": "Подарки"
+  },
+  "gifts": {
+   "kind": "expense",
+   "parent": "giving",
+   "bucket": "wants",
+   "en": "Gifts",
+   "sv": "Presenter",
+   "de": "Geschenke",
+   "ru": "Подарки"
+  },
+  "charity": {
+   "kind": "expense",
+   "parent": "giving",
+   "bucket": "wants",
+   "en": "Charity",
+   "sv": "Välgörenhet",
+   "de": "Spenden",
+   "ru": "Благотворительность"
+  },
+  "finance": {
+   "kind": "expense",
+   "parent": null,
+   "bucket": "technical",
+   "en": "Finance",
+   "sv": "Ekonomi",
+   "de": "Finanzen",
+   "ru": "Финансы"
+  },
+  "insurance": {
+   "kind": "expense",
+   "parent": "finance",
+   "bucket": "needs",
+   "en": "Insurance",
+   "sv": "Försäkring",
+   "de": "Versicherung",
+   "ru": "Страхование"
+  },
+  "bank_fees": {
+   "kind": "expense",
+   "parent": "finance",
+   "bucket": "technical",
+   "en": "Bank fees",
+   "sv": "Bankavgifter",
+   "de": "Bankgebühren",
+   "ru": "Банковские комиссии"
+  },
+  "loan_interest": {
+   "kind": "expense",
+   "parent": "finance",
+   "bucket": "technical",
+   "en": "Loan interest",
+   "sv": "Låneränta",
+   "de": "Kreditzinsen",
+   "ru": "Проценты по кредитам"
+  },
+  "fines": {
+   "kind": "expense",
+   "parent": "finance",
+   "bucket": "exceptional",
+   "en": "Fines",
+   "sv": "Böter",
+   "de": "Bußgelder",
+   "ru": "Штрафы"
+  },
+  "services": {
+   "kind": "expense",
+   "parent": null,
+   "bucket": "needs",
+   "en": "Services",
+   "sv": "Tjänster",
+   "de": "Dienstleistungen",
+   "ru": "Услуги"
+  },
+  "reimbursable": {
+   "kind": "expense",
+   "parent": null,
+   "bucket": "needs",
+   "en": "To be reimbursed",
+   "sv": "Utlägg",
+   "de": "Auslagen",
+   "ru": "К возмещению"
+  },
+  "unidentified": {
+   "kind": "expense",
+   "parent": null,
+   "bucket": "technical",
+   "en": "Unidentified",
+   "sv": "Oidentifierat",
+   "de": "Unbekannt",
+   "ru": "Неопознанное"
+  },
+  "salary": {
+   "kind": "income",
+   "parent": null,
+   "bucket": null,
+   "en": "Salary",
+   "sv": "Lön",
+   "de": "Gehalt",
+   "ru": "Зарплата"
+  },
+  "benefits": {
+   "kind": "income",
+   "parent": null,
+   "bucket": null,
+   "en": "Benefits",
+   "sv": "Ersättningar",
+   "de": "Leistungen",
+   "ru": "Пособия"
+  },
+  "side_income": {
+   "kind": "income",
+   "parent": null,
+   "bucket": null,
+   "en": "Side income",
+   "sv": "Extrainkomst",
+   "de": "Nebeneinkommen",
+   "ru": "Подработка"
+  },
+  "music_income": {
+   "kind": "income",
+   "parent": null,
+   "bucket": null,
+   "en": "Music income",
+   "sv": "Musikintäkter",
+   "de": "Musikeinnahmen",
+   "ru": "Доходы от музыки"
+  },
+  "sold_items": {
+   "kind": "income",
+   "parent": null,
+   "bucket": null,
+   "en": "Sold items",
+   "sv": "Sålt",
+   "de": "Verkäufe",
+   "ru": "Продажи вещей"
+  },
+  "gifts_received": {
+   "kind": "income",
+   "parent": null,
+   "bucket": null,
+   "en": "Gifts received",
+   "sv": "Fått i gåva",
+   "de": "Geschenke erhalten",
+   "ru": "Полученные подарки"
+  },
+  "interest_income": {
+   "kind": "income",
+   "parent": null,
+   "bucket": null,
+   "en": "Interest",
+   "sv": "Ränteintäkter",
+   "de": "Zinserträge",
+   "ru": "Процентный доход"
+  },
+  "dividends": {
+   "kind": "income",
+   "parent": null,
+   "bucket": null,
+   "en": "Dividends",
+   "sv": "Utdelning",
+   "de": "Dividenden",
+   "ru": "Дивиденды"
+  },
+  "tax_refund": {
+   "kind": "income",
+   "parent": null,
+   "bucket": null,
+   "en": "Tax refund",
+   "sv": "Skatteåterbäring",
+   "de": "Steuererstattung",
+   "ru": "Возврат налога"
+  },
+  "vat_refund": {
+   "kind": "income",
+   "parent": null,
+   "bucket": null,
+   "en": "VAT refund",
+   "sv": "Momsåterbetalning",
+   "de": "Umsatzsteuererstattung",
+   "ru": "Возврат НДС"
+  },
+  "cashback": {
+   "kind": "income",
+   "parent": null,
+   "bucket": null,
+   "en": "Cashback and refunds",
+   "sv": "Återbetalningar",
+   "de": "Rückerstattungen",
+   "ru": "Кэшбэк и возвраты"
+  },
+  "shared_repaid": {
+   "kind": "income",
+   "parent": null,
+   "bucket": null,
+   "en": "Shared costs paid back",
+   "sv": "Delade kostnader tillbaka",
+   "de": "Geteilte Kosten zurück",
+   "ru": "Возврат общих расходов"
+  },
+  "other_income": {
+   "kind": "income",
+   "parent": null,
+   "bucket": null,
+   "en": "Other income",
+   "sv": "Övriga intäkter",
+   "de": "Sonstige Einnahmen",
+   "ru": "Прочие доходы"
+  },
+  "cash_withdrawal": {
+   "kind": "neutral",
+   "parent": null,
+   "bucket": null,
+   "en": "Cash withdrawal",
+   "sv": "Kontantuttag",
+   "de": "Bargeldabhebung",
+   "ru": "Снятие наличных"
+  },
+  "correction": {
+   "kind": "neutral",
+   "parent": null,
+   "bucket": null,
+   "en": "Correction",
+   "sv": "Korrigering",
+   "de": "Korrektur",
+   "ru": "Корректировка"
+  }
+ },
+ "terms": {
+  "amortisation": {
+   "en": "Amortisation: paying down the loan itself, not the interest.",
+   "sv": "Amortering: att betala av själva lånet, inte räntan.",
+   "de": "Tilgung: die Rückzahlung des Kredits selbst, nicht der Zinsen.",
+   "ru": "Погашение основного долга: выплата самого кредита, а не процентов."
+  },
+  "interest": {
+   "en": "Interest: what borrowing costs. It does not make the loan smaller.",
+   "sv": "Ränta: vad det kostar att låna. Lånet blir inte mindre av den.",
+   "de": "Zinsen: was das Leihen kostet. Der Kredit wird dadurch nicht kleiner.",
+   "ru": "Проценты: цена кредита. Долг от них не уменьшается."
+  },
+  "net_worth": {
+   "en": "Net worth: everything you own minus everything you owe, your part only.",
+   "sv": "Nettoförmögenhet: allt du äger minus allt du är skyldig, bara din del.",
+   "de": "Nettovermögen: alles, was du besitzt, minus alles, was du schuldest – nur dein Anteil.",
+   "ru": "Чистый капитал: всё, чем вы владеете, минус все долги, только ваша доля."
+  },
+  "transfer": {
+   "en": "Transfer: money moved between your own places. Not spending, not income.",
+   "sv": "Överföring: pengar flyttade mellan dina egna ställen. Varken utgift eller inkomst.",
+   "de": "Umbuchung: Geld zwischen deinen eigenen Konten. Weder Ausgabe noch Einnahme.",
+   "ru": "Перевод: деньги между вашими же счетами. Не расход и не доход."
+  },
+  "my_share": {
+   "en": "Your part: what is yours of something shared. The whole is shown beside it.",
+   "sv": "Din del: det som är ditt av något ni delar. Helheten visas bredvid.",
+   "de": "Dein Anteil: was dir von etwas Geteiltem gehört. Das Ganze steht daneben.",
+   "ru": "Ваша доля: ваша часть общего. Полная сумма показана рядом."
+  },
+  "planned": {
+   "en": "Planned: expected but not paid yet. It already counts against what is left.",
+   "sv": "Planerad: väntad men inte betald. Den räknas redan bort från det som är kvar.",
+   "de": "Geplant: erwartet, aber noch nicht bezahlt. Zählt schon gegen den Rest.",
+   "ru": "Запланировано: ожидается, но ещё не оплачено. Уже вычтено из остатка."
+  }
+ }
+}

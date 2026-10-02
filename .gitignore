@@ -1,0 +1,20 @@
+RPMS/
+build-*/
+*.pro.user
+*.pro.user.*
+*.autosave
+Makefile
+.qmake.stash
+*.o
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+/harbour-fiatratio
+__pycache__/
+
+# Your own money never goes in the repository: exports, databases, Baserow dumps.
+*.sqlite
+*.sqlite-journal
+fiat-ratio-*.json
+*-bundle.json
+*.csv
