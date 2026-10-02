@@ -8,21 +8,21 @@
  "maintained": {
   "en": "author",
   "sv": "author",
-  "de": "community",
-  "ru": "community"
+  "de": "author",
+  "ru": "author"
  },
  "buckets": {
   "needs": {
    "en": "Needs",
-   "sv": "Behov",
-   "de": "Bedarf",
-   "ru": "Необходимое"
+   "sv": "Måsten",
+   "de": "Müssen",
+   "ru": "Надо"
   },
   "wants": {
    "en": "Wants",
-   "sv": "Önskemål",
-   "de": "Wünsche",
-   "ru": "Желания"
+   "sv": "Villhöver",
+   "de": "Wollen",
+   "ru": "Хочу"
   },
   "savings": {
    "en": "Savings",
@@ -32,15 +32,15 @@
   },
   "technical": {
    "en": "Technical",
-   "sv": "Tekniskt",
-   "de": "Technisches",
-   "ru": "Технические"
+   "sv": "Justeringar",
+   "de": "Anpassungen",
+   "ru": "Корректировки"
   },
   "exceptional": {
    "en": "Exceptional",
-   "sv": "Oförutsett",
-   "de": "Außergewöhnlich",
-   "ru": "Непредвиденное"
+   "sv": "Extraordinärt",
+   "de": "Außerordentliches",
+   "ru": "Чрезвычайное"
   }
  },
  "categories": {
@@ -58,7 +58,7 @@
    "parent": "food",
    "bucket": "needs",
    "en": "Groceries",
-   "sv": "Livsmedel",
+   "sv": "Matvaror",
    "de": "Lebensmittel",
    "ru": "Продукты"
   },
@@ -103,9 +103,9 @@
    "parent": null,
    "bucket": "needs",
    "en": "Home",
-   "sv": "Boende",
-   "de": "Wohnen",
-   "ru": "Жильё"
+   "sv": "Hem",
+   "de": "Zuhause",
+   "ru": "Дом"
   },
   "rent": {
    "kind": "expense",
@@ -130,7 +130,7 @@
    "parent": "home",
    "bucket": "needs",
    "en": "Mortgage interest",
-   "sv": "Ränta på bolån",
+   "sv": "Bolåneränta",
    "de": "Hypothekenzinsen",
    "ru": "Проценты по ипотеке"
   },
@@ -238,9 +238,9 @@
    "parent": "transport",
    "bucket": "needs",
    "en": "Tolls and fees",
-   "sv": "Avgifter och tullar",
-   "de": "Gebühren und Maut",
-   "ru": "Сборы и пошлины"
+   "sv": "Vägtullar och avgifter",
+   "de": "Maut und Gebühren",
+   "ru": "Платные дороги и сборы"
   },
   "travel": {
    "kind": "expense",
@@ -391,9 +391,9 @@
    "parent": "leisure",
    "bucket": "wants",
    "en": "Gambling",
-   "sv": "Spel",
+   "sv": "Spel och lotter",
    "de": "Glücksspiel",
-   "ru": "Азартные игры"
+   "ru": "Азартные игры и лотереи"
   },
   "social_club": {
    "kind": "expense",
@@ -436,9 +436,9 @@
    "parent": "shopping",
    "bucket": "wants",
    "en": "Software and services",
-   "sv": "Programvara och tjänster",
-   "de": "Software und Dienste",
-   "ru": "Программы и сервисы"
+   "sv": "Digitala verktyg",
+   "de": "Digitale Werkzeuge",
+   "ru": "Цифровые инструменты"
   },
   "tech": {
    "kind": "expense",
@@ -481,7 +481,7 @@
    "parent": null,
    "bucket": "technical",
    "en": "Finance",
-   "sv": "Ekonomi",
+   "sv": "Finanser",
    "de": "Finanzen",
    "ru": "Финансы"
   },
@@ -598,9 +598,9 @@
    "parent": null,
    "bucket": null,
    "en": "Gifts received",
-   "sv": "Fått i gåva",
-   "de": "Geschenke erhalten",
-   "ru": "Полученные подарки"
+   "sv": "Gåva",
+   "de": "Geschenke",
+   "ru": "Подарки"
   },
   "interest_income": {
    "kind": "income",

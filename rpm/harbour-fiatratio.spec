@@ -1,6 +1,6 @@
 Name:       harbour-fiatratio
 Summary:    Fiat Ratio – money from one salary to the next
-Version:    0.9
+Version:    1.0
 Release:    1
 License:    MIT
 URL:        https://github.com/munksh/FiatRatio

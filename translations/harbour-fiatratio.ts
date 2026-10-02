@@ -19,122 +19,117 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="60"/>
-        <source>Everything goes out to one open file and comes back in from it: to a new phone, to another program, or out of the app altogether.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="70"/>
+        <location filename="../qml/pages/AboutPage.qml" line="61"/>
         <source>&lt;b&gt;fiat&lt;/b&gt; — Latin, &lt;i&gt;let there be&lt;/i&gt;. From &lt;i&gt;fiat lux&lt;/i&gt; in the Vulgate: let there be light, and there was light. The first app took the phrase. The rest of the family kept the verb.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="80"/>
+        <location filename="../qml/pages/AboutPage.qml" line="71"/>
         <source>&lt;b&gt;ratio&lt;/b&gt; — reckoning, account; also reason. The Romans kept their accounts in the same word they used for thinking clearly.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="113"/>
+        <location filename="../qml/pages/AboutPage.qml" line="104"/>
         <source>Thrift is a great income.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="133"/>
+        <location filename="../qml/pages/AboutPage.qml" line="124"/>
         <source>Your data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="141"/>
+        <location filename="../qml/pages/AboutPage.qml" line="132"/>
         <source>Everything is kept on the phone, in the app&apos;s own storage. Exports are saved to Documents/fiat-ratio. Nothing leaves the phone: no account, no bank connection, no network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="149"/>
+        <location filename="../qml/pages/AboutPage.qml" line="140"/>
         <source>Permissions: Documents, to save exports, and Downloads, to read a file you bring in.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="152"/>
+        <location filename="../qml/pages/AboutPage.qml" line="143"/>
         <source>Made by</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="182"/>
+        <location filename="../qml/pages/AboutPage.qml" line="173"/>
         <source>Everything else I make</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="203"/>
+        <location filename="../qml/pages/AboutPage.qml" line="194"/>
         <source>Source and issues · MIT licence</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="210"/>
+        <location filename="../qml/pages/AboutPage.qml" line="201"/>
         <source>The fiat family</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="214"/>
+        <location filename="../qml/pages/AboutPage.qml" line="205"/>
         <source>let there be doing — a task list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="215"/>
+        <location filename="../qml/pages/AboutPage.qml" line="206"/>
         <source>let there be edge — keeps edges</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="216"/>
+        <location filename="../qml/pages/AboutPage.qml" line="207"/>
         <source>let there be tongue — a translator</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="217"/>
+        <location filename="../qml/pages/AboutPage.qml" line="208"/>
         <source>let there be voice — a chromatic tuner</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="218"/>
+        <location filename="../qml/pages/AboutPage.qml" line="209"/>
         <source>let there be bridge — a native Qobuz client</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="219"/>
-        <source>let there be light — a light meter for film - Coming soon</source>
+        <location filename="../qml/pages/AboutPage.qml" line="210"/>
+        <source>let there be light — a light meter for film</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="220"/>
+        <location filename="../qml/pages/AboutPage.qml" line="214"/>
+        <source>let there be image — a photo editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="211"/>
         <source>let there be heart — a metronome</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="221"/>
+        <location filename="../qml/pages/AboutPage.qml" line="212"/>
         <source>let there be step — a step counter - Coming soon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="222"/>
+        <location filename="../qml/pages/AboutPage.qml" line="213"/>
         <source>let there be habit — a habit tracker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="223"/>
-        <source>let there be image — a photo editor - Coming soon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="224"/>
+        <location filename="../qml/pages/AboutPage.qml" line="215"/>
         <source>let there be reckoning — this one</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="271"/>
+        <location filename="../qml/pages/AboutPage.qml" line="262"/>
         <source>Version %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="271"/>
+        <location filename="../qml/pages/AboutPage.qml" line="262"/>
         <source>unknown</source>
         <translation type="unfinished"></translation>
     </message>
@@ -192,18 +187,28 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="95"/>
+        <location filename="../qml/pages/AccountPage.qml" line="96"/>
+        <source>correct the balance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AccountPage.qml" line="104"/>
         <source>close it</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="97"/>
+        <location filename="../qml/pages/AccountPage.qml" line="106"/>
         <source>Closing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="110"/>
+        <location filename="../qml/pages/AccountPage.qml" line="119"/>
         <source>Moves</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AccountPage.qml" line="125"/>
+        <source>balance correction</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -545,12 +550,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AnalysisPage.qml" line="75"/>
+        <location filename="../qml/pages/AnalysisPage.qml" line="76"/>
         <source>last month</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AnalysisPage.qml" line="76"/>
+        <location filename="../qml/pages/AnalysisPage.qml" line="75"/>
         <source>this month</source>
         <translation type="unfinished"></translation>
     </message>
@@ -861,6 +866,44 @@
     <message>
         <location filename="../qml/pages/AssetsPage.qml" line="167"/>
         <source>got it</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>BalanceDialog</name>
+    <message>
+        <location filename="../qml/pages/BalanceDialog.qml" line="50"/>
+        <source>Total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BalanceDialog.qml" line="50"/>
+        <source>Owed today</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BalanceDialog.qml" line="50"/>
+        <source>Balance today</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BalanceDialog.qml" line="54"/>
+        <source>Your part (%1): %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BalanceDialog.qml" line="64"/>
+        <source>Write what the account really holds. The app saves the difference as a balance correction.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BalanceDialog.qml" line="66"/>
+        <source>Already right. Nothing to correct.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BalanceDialog.qml" line="67"/>
+        <source>Difference: %1. Saved as a balance correction. It does not count as income or saving.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

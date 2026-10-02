@@ -1,4 +1,5 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
 <TS version="2.1" language="de">
 <context>
     <name>AboutPage</name>
@@ -13,10 +14,6 @@
     <message>
         <source>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Shared costs are entered at the full price and only your part counts. Savings, a home and loans add up to one net worth.</source>
         <translation>fiat ratio führt den Monat von einem Gehalt zum nächsten: was hereinkam, was hinausging und was noch kommt. Geteilte Kosten werden zum vollen Preis eingetragen, gezählt wird nur dein Anteil. Ersparnisse, eine Wohnung und Kredite ergeben zusammen ein Vermögen.</translation>
-    </message>
-    <message>
-        <source>Everything goes out to one open file and comes back in from it: to a new phone, to another program, or out of the app altogether.</source>
-        <translation>Alles geht in eine offene Datei hinaus und kommt aus ihr zurück: auf ein neues Telefon, in ein anderes Programm oder ganz aus der App hinaus.</translation>
     </message>
     <message>
         <source>&lt;b&gt;fiat&lt;/b&gt; — Latin, &lt;i&gt;let there be&lt;/i&gt;. From &lt;i&gt;fiat lux&lt;/i&gt; in the Vulgate: let there be light, and there was light. The first app took the phrase. The rest of the family kept the verb.</source>
@@ -35,7 +32,7 @@
         <translation>Deine Daten</translation>
     </message>
     <message>
-        <source>Everything is kept on the phone, in the app's own storage. Exports are saved to Documents/fiat-ratio. Nothing leaves the phone: no account, no bank connection, no network.</source>
+        <source>Everything is kept on the phone, in the app&apos;s own storage. Exports are saved to Documents/fiat-ratio. Nothing leaves the phone: no account, no bank connection, no network.</source>
         <translation>Alles bleibt auf dem Telefon, im eigenen Speicher der App. Exporte landen in Dokumente/fiat-ratio. Nichts verlässt das Telefon: kein Konto, keine Bankverbindung, kein Netz.</translation>
     </message>
     <message>
@@ -79,10 +76,6 @@
         <translation>es werde Brücke — ein nativer Qobuz-Client</translation>
     </message>
     <message>
-        <source>let there be light — a light meter for film - Coming soon</source>
-        <translation>es werde Licht — ein Belichtungsmesser für Film - Bald</translation>
-    </message>
-    <message>
         <source>let there be heart — a metronome</source>
         <translation>es werde Herz — ein Metronom</translation>
     </message>
@@ -95,10 +88,6 @@
         <translation>es werde Gewohnheit — ein Gewohnheitstracker</translation>
     </message>
     <message>
-        <source>let there be image — a photo editor - Coming soon</source>
-        <translation>es werde Bild — eine Bildbearbeitung - Bald</translation>
-    </message>
-    <message>
         <source>let there be reckoning — this one</source>
         <translation>es werde Rechnung — diese hier</translation>
     </message>
@@ -109,6 +98,14 @@
     <message>
         <source>unknown</source>
         <translation>unbekannt</translation>
+    </message>
+    <message>
+        <source>let there be light — a light meter for film</source>
+        <translation>es werde Licht — ein Belichtungsmesser für Film</translation>
+    </message>
+    <message>
+        <source>let there be image — a photo editor</source>
+        <translation>es werde Bild — eine Bildbearbeitung</translation>
     </message>
 </context>
 <context>
@@ -177,7 +174,7 @@
 <context>
     <name>AccountPickerPage</name>
     <message>
-        <source>the month's money</source>
+        <source>the month&apos;s money</source>
         <translation>das Geld des Monats</translation>
     </message>
     <message>
@@ -188,7 +185,7 @@
 <context>
     <name>AddDialog</name>
     <message>
-        <source>the month's money</source>
+        <source>the month&apos;s money</source>
         <translation>das Geld des Monats</translation>
     </message>
     <message>
@@ -272,7 +269,7 @@
         <translation>ein anderer Betrag kam an</translation>
     </message>
     <message>
-        <source>Arrived, in that place's currency</source>
+        <source>Arrived, in that place&apos;s currency</source>
         <translation>Angekommen, in der Währung dort</translation>
     </message>
     <message>
@@ -349,7 +346,7 @@
     </message>
     <message>
         <source>Paying off: lowers the debt. Counts as a need.</source>
-        <translation>Tilgung: senkt die Schuld. Zählt als Bedarf.</translation>
+        <translation>Tilgung: senkt die Schuld. Zählt zu den Müssen.</translation>
     </message>
     <message>
         <source>Counts as saving. The money is still yours.</source>
@@ -360,7 +357,7 @@
         <translation>Geliehenes Geld. Kein Einkommen, und die Schuld wächst.</translation>
     </message>
     <message>
-        <source>Taken from savings. Not income, and lowers this month's saving.</source>
+        <source>Taken from savings. Not income, and lowers this month&apos;s saving.</source>
         <translation>Vom Ersparten genommen. Kein Einkommen, und es senkt das Sparen dieses Monats.</translation>
     </message>
     <message>
@@ -476,7 +473,7 @@
     </message>
     <message>
         <source>Part of Needs</source>
-        <translation>Teil von Bedarf</translation>
+        <translation>Teil von Müssen</translation>
     </message>
     <message>
         <source>trends</source>
@@ -837,7 +834,7 @@
     </message>
     <message>
         <source>Needs, wants or saving. Sets the colour on the month bar.</source>
-        <translation>Bedarf, Wunsch oder Sparen. Bestimmt die Farbe im Monatsbalken.</translation>
+        <translation>Müssen, Wollen oder Sparen. Bestimmt die Farbe im Monatsbalken.</translation>
     </message>
 </context>
 <context>
@@ -980,12 +977,103 @@
     <name>CoverPage</name>
     <message>
         <source>left · %1 days</source>
-        <extracomment>Cover, under what is left: "left · 12 days"</extracomment>
+        <extracomment>Cover, under what is left: &quot;left · 12 days&quot;</extracomment>
         <translation>übrig · %1 Tage</translation>
     </message>
     <message>
         <source>not set up</source>
         <translation>nicht eingerichtet</translation>
+    </message>
+</context>
+<context>
+    <name>Demo</name>
+    <message>
+        <source>Card</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swish</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Buffer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Funds</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Home</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mortgage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Student loan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Electricity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Broadband</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mobile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gym</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Car insurance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Home insurance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To the buffer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Salary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Grocery shop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restaurant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clothes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dinner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Coffee</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1139,7 +1227,7 @@
         <translation>Zwischen Personen</translation>
     </message>
     <message>
-        <source>the month's money</source>
+        <source>the month&apos;s money</source>
         <translation>das Geld des Monats</translation>
     </message>
     <message>
@@ -1345,7 +1433,7 @@
         <translation>Wie ein Zuhause oder ein Auto. Füge die Sache selbst unter Dinge hinzu, falls sie fehlt.</translation>
     </message>
     <message>
-        <source>Variable? Write today's. You confirm each payment with the real amount.</source>
+        <source>Variable? Write today&apos;s. You confirm each payment with the real amount.</source>
         <translation>Schwankt es? Schreib den heutigen. Du bestätigst jede Zahlung mit dem echten Betrag.</translation>
     </message>
     <message>
@@ -1472,8 +1560,8 @@
         <translation>Trends: ein Monat, drei Monate oder ein Jahr, jede Kategorie neben dem, was für dich typisch ist.</translation>
     </message>
     <message>
-        <source>That's it. When you start for real, the made-up numbers are gone.</source>
-        <translation>Das war's. Wenn du richtig startest, sind die erfundenen Zahlen weg.</translation>
+        <source>That&apos;s it. When you start for real, the made-up numbers are gone.</source>
+        <translation>Das war&apos;s. Wenn du richtig startest, sind die erfundenen Zahlen weg.</translation>
     </message>
     <message>
         <source>Data</source>
@@ -1515,7 +1603,7 @@
 <context>
     <name>ScheduleDialog</name>
     <message>
-        <source>the month's money</source>
+        <source>the month&apos;s money</source>
         <translation>das Geld des Monats</translation>
     </message>
     <message>
@@ -1670,7 +1758,7 @@
         <translation>jede Woche</translation>
     </message>
     <message>
-        <source>the month's money</source>
+        <source>the month&apos;s money</source>
         <translation>das Geld des Monats</translation>
     </message>
     <message>
@@ -1955,7 +2043,7 @@
 <context>
     <name>TxnRow</name>
     <message>
-        <source>the month's money</source>
+        <source>the month&apos;s money</source>
         <translation>das Geld des Monats</translation>
     </message>
     <message>
@@ -1972,7 +2060,7 @@
     </message>
     <message>
         <source>of %1</source>
-        <extracomment>Under a shared amount, the whole price: "of 840"</extracomment>
+        <extracomment>Under a shared amount, the whole price: &quot;of 840&quot;</extracomment>
         <translation>von %1</translation>
     </message>
     <message>
@@ -2014,7 +2102,7 @@
         <translation>Die Datei konnte nicht gelesen werden: %1</translation>
     </message>
     <message>
-        <source>The file was read, but it holds no month's money.</source>
+        <source>The file was read, but it holds no month&apos;s money.</source>
         <translation>Die Datei wurde gelesen, enthält aber kein Geld des Monats.</translation>
     </message>
     <message>

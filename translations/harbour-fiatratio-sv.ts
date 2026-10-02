@@ -1,4 +1,5 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
 <TS version="2.1" language="sv">
 <context>
     <name>AboutPage</name>
@@ -8,23 +9,19 @@
     </message>
     <message>
         <source>The salary came on Friday. The rent goes on the 25th. The electricity cost more than last month.</source>
-        <translation>Lönen kom i fredags. Hyran går den 25:e. Elen blev dyrare än förra månaden.</translation>
+        <translation>Lönen kom i fredags. Hyran är den 25:e. Elen blev dyrare än förra månaden.</translation>
     </message>
     <message>
         <source>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Shared costs are entered at the full price and only your part counts. Savings, a home and loans add up to one net worth.</source>
-        <translation>fiat ratio håller ordning på månaden från en lön till nästa: det som kom in, det som gick ut och det som fortfarande är på väg. Delade kostnader skrivs in till fullt pris och bara din del räknas. Sparande, en bostad och lån blir tillsammans en nettoförmögenhet.</translation>
-    </message>
-    <message>
-        <source>Everything goes out to one open file and comes back in from it: to a new phone, to another program, or out of the app altogether.</source>
-        <translation>Allt går ut till en öppen fil och kommer tillbaka in från den: till en ny telefon, till ett annat program eller helt ut ur appen.</translation>
+        <translation>fiat ratio håller koll på månaden från en lön till nästa: vad som kom in, vad som gick ut och vad som återstår. Delade kostnader läggs in till fullt pris och bara din del räknas. Sparande, en bostad och lån blir tillsammans en nettoförmögenhet.</translation>
     </message>
     <message>
         <source>&lt;b&gt;fiat&lt;/b&gt; — Latin, &lt;i&gt;let there be&lt;/i&gt;. From &lt;i&gt;fiat lux&lt;/i&gt; in the Vulgate: let there be light, and there was light. The first app took the phrase. The rest of the family kept the verb.</source>
-        <translation>&lt;b&gt;fiat&lt;/b&gt; — latin, &lt;i&gt;varde&lt;/i&gt;. Från &lt;i&gt;fiat lux&lt;/i&gt; i Vulgata: varde ljus, och det vart ljus. Den första appen tog hela frasen. Resten av familjen behöll verbet.</translation>
+        <translation>&lt;b&gt;fiat&lt;/b&gt; — latin, &lt;i&gt;varde&lt;/i&gt;. Från &lt;i&gt;fiat lux&lt;/i&gt; i Vulgata: varde ljus, och det blev ljus. Den första appen tog frasen. Resten av familjen behöll verbet.</translation>
     </message>
     <message>
         <source>&lt;b&gt;ratio&lt;/b&gt; — reckoning, account; also reason. The Romans kept their accounts in the same word they used for thinking clearly.</source>
-        <translation>&lt;b&gt;ratio&lt;/b&gt; — räkning, redovisning; också förnuft. Romarna förde sina räkenskaper med samma ord som de använde för att tänka klart.</translation>
+        <translation>&lt;b&gt;ratio&lt;/b&gt; — räkenskap, uträkning; också förnuft. Romarna förde sin bokföring med samma ord som de använde för att tänka klart.</translation>
     </message>
     <message>
         <source>Thrift is a great income.</source>
@@ -32,15 +29,15 @@
     </message>
     <message>
         <source>Your data</source>
-        <translation>Dina uppgifter</translation>
+        <translation>Dina data</translation>
     </message>
     <message>
-        <source>Everything is kept on the phone, in the app's own storage. Exports are saved to Documents/fiat-ratio. Nothing leaves the phone: no account, no bank connection, no network.</source>
-        <translation>Allt sparas på telefonen, i appens eget lagringsutrymme. Exporter sparas i Dokument/fiat-ratio. Inget lämnar telefonen: inget konto, ingen bankkoppling, inget nätverk.</translation>
+        <source>Everything is kept on the phone, in the app&apos;s own storage. Exports are saved to Documents/fiat-ratio. Nothing leaves the phone: no account, no bank connection, no network.</source>
+        <translation>Allt sparas på telefonen, i appens egen lagring. Exporter sparas i Documents/fiat-ratio. Ingenting lämnar telefonen: inget konto, ingen bankkoppling, inget nätverk.</translation>
     </message>
     <message>
         <source>Permissions: Documents, to save exports, and Downloads, to read a file you bring in.</source>
-        <translation>Behörigheter: Dokument, för att spara exporter, och Hämtningar, för att läsa en fil du tar in.</translation>
+        <translation>Behörigheter: Documents, för att spara exporter, och Downloads, för att läsa en fil du tar in.</translation>
     </message>
     <message>
         <source>Made by</source>
@@ -52,11 +49,11 @@
     </message>
     <message>
         <source>Source and issues · MIT licence</source>
-        <translation>Källkod och ärenden · MIT-licens</translation>
+        <translation>Källkod och problem · MIT-licens</translation>
     </message>
     <message>
         <source>The fiat family</source>
-        <translation>Fiat-familjen</translation>
+        <translation>fiat-familjen</translation>
     </message>
     <message>
         <source>let there be doing — a task list</source>
@@ -64,7 +61,7 @@
     </message>
     <message>
         <source>let there be edge — keeps edges</source>
-        <translation>varde kant — behåller kanter</translation>
+        <translation>varde kant — håller kanter</translation>
     </message>
     <message>
         <source>let there be tongue — a translator</source>
@@ -76,11 +73,7 @@
     </message>
     <message>
         <source>let there be bridge — a native Qobuz client</source>
-        <translation>varde bro — en egen Qobuz-klient</translation>
-    </message>
-    <message>
-        <source>let there be light — a light meter for film - Coming soon</source>
-        <translation>varde ljus — en ljusmätare för film - Kommer snart</translation>
+        <translation>varde bro — en inbyggd Qobuz-klient</translation>
     </message>
     <message>
         <source>let there be heart — a metronome</source>
@@ -88,19 +81,15 @@
     </message>
     <message>
         <source>let there be step — a step counter - Coming soon</source>
-        <translation>varde steg — en stegräknare - Kommer snart</translation>
+        <translation>varde steg — en stegräknare - kommer snart</translation>
     </message>
     <message>
         <source>let there be habit — a habit tracker</source>
         <translation>varde vana — en vanespårare</translation>
     </message>
     <message>
-        <source>let there be image — a photo editor - Coming soon</source>
-        <translation>varde bild — en bildredigerare - Kommer snart</translation>
-    </message>
-    <message>
         <source>let there be reckoning — this one</source>
-        <translation>varde räkenskap — den här</translation>
+        <translation>varde räkning — den här</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -110,12 +99,20 @@
         <source>unknown</source>
         <translation>okänd</translation>
     </message>
+    <message>
+        <source>let there be light — a light meter for film</source>
+        <translation>varde ljus — en ljusmätare för film</translation>
+    </message>
+    <message>
+        <source>let there be image — a photo editor</source>
+        <translation>varde bild — en bildredigerare</translation>
+    </message>
 </context>
 <context>
     <name>AccountPage</name>
     <message>
         <source>your %1 of %2</source>
-        <translation>dina %1 av %2</translation>
+        <translation>din %1 av %2</translation>
     </message>
     <message>
         <source>with %1</source>
@@ -131,7 +128,7 @@
     </message>
     <message>
         <source>a new value</source>
-        <translation>ett nytt värde</translation>
+        <translation>nytt värde</translation>
     </message>
     <message>
         <source>the interest changed</source>
@@ -177,7 +174,7 @@
 <context>
     <name>AccountPickerPage</name>
     <message>
-        <source>the month's money</source>
+        <source>the month&apos;s money</source>
         <translation>månadens pengar</translation>
     </message>
     <message>
@@ -188,7 +185,7 @@
 <context>
     <name>AddDialog</name>
     <message>
-        <source>the month's money</source>
+        <source>the month&apos;s money</source>
         <translation>månadens pengar</translation>
     </message>
     <message>
@@ -269,15 +266,15 @@
     </message>
     <message>
         <source>a different amount arrived</source>
-        <translation>ett annat belopp kom fram</translation>
+        <translation>det kom ett annat belopp</translation>
     </message>
     <message>
-        <source>Arrived, in that place's currency</source>
-        <translation>Kom fram, i den platsens valuta</translation>
+        <source>Arrived, in that place&apos;s currency</source>
+        <translation>Kom fram, i kontots valuta</translation>
     </message>
     <message>
         <source>Context</source>
-        <translation>Sammanhang</translation>
+        <translation>Kontext</translation>
     </message>
     <message>
         <source>When</source>
@@ -285,11 +282,11 @@
     </message>
     <message>
         <source>today</source>
-        <translation>i dag</translation>
+        <translation>idag</translation>
     </message>
     <message>
         <source>yesterday</source>
-        <translation>i går</translation>
+        <translation>igår</translation>
     </message>
     <message>
         <source>no</source>
@@ -317,7 +314,7 @@
     </message>
     <message>
         <source>Deleting</source>
-        <translation>Raderar</translation>
+        <translation>Tar bort</translation>
     </message>
     <message>
         <source>got it</source>
@@ -333,15 +330,15 @@
     </message>
     <message>
         <source>none</source>
-        <translation>inget</translation>
+        <translation>ingen</translation>
     </message>
     <message>
         <source>Travel, work, a project. Optional.</source>
-        <translation>Resa, jobb, ett projekt. Frivilligt.</translation>
+        <translation>Resa, jobb, ett projekt. Valfritt.</translation>
     </message>
     <message>
         <source>contexts</source>
-        <translation>sammanhang</translation>
+        <translation>kontext</translation>
     </message>
     <message>
         <source>split</source>
@@ -349,7 +346,7 @@
     </message>
     <message>
         <source>Paying off: lowers the debt. Counts as a need.</source>
-        <translation>Amortering: minskar skulden. Räknas som behov.</translation>
+        <translation>Amortering: minskar skulden. Räknas som ett måste.</translation>
     </message>
     <message>
         <source>Counts as saving. The money is still yours.</source>
@@ -357,15 +354,15 @@
     </message>
     <message>
         <source>Borrowed money. Not income, and the debt grows.</source>
-        <translation>Lånade pengar. Ingen inkomst, och skulden växer.</translation>
+        <translation>Lånade pengar. Inte inkomst, och skulden växer.</translation>
     </message>
     <message>
-        <source>Taken from savings. Not income, and lowers this month's saving.</source>
-        <translation>Tagit från sparandet. Ingen inkomst, och minskar månadens sparande.</translation>
+        <source>Taken from savings. Not income, and lowers this month&apos;s saving.</source>
+        <translation>Uttag från sparande. Inte inkomst, och sänker månadens sparande.</translation>
     </message>
     <message>
         <source>Between your own places. The month is not affected.</source>
-        <translation>Mellan dina egna ställen. Månaden påverkas inte.</translation>
+        <translation>Mellan dina egna konton. Månaden påverkas inte.</translation>
     </message>
     <message>
         <source>Total</source>
@@ -381,7 +378,7 @@
     </message>
     <message>
         <source>A later day: stays planned until you confirm it.</source>
-        <translation>En senare dag: förblir planerad tills du bekräftar.</translation>
+        <translation>Senare dag: förblir planerad tills du bekräftar.</translation>
     </message>
     <message>
         <source>The salary starts a new month.</source>
@@ -472,11 +469,11 @@
     </message>
     <message>
         <source>Paying off loans</source>
-        <translation>Amortering på lån</translation>
+        <translation>Amortering av lån</translation>
     </message>
     <message>
         <source>Part of Needs</source>
-        <translation>Ingår i Behov</translation>
+        <translation>Del av Måsten</translation>
     </message>
     <message>
         <source>trends</source>
@@ -496,7 +493,7 @@
     </message>
     <message>
         <source>Categories, against typical</source>
-        <translation>Kategorier, mot det typiska</translation>
+        <translation>Kategorier mot det typiska</translation>
     </message>
     <message>
         <source>typical %1</source>
@@ -547,7 +544,7 @@
     </message>
     <message>
         <source>I owe them</source>
-        <translation>jag är skyldig</translation>
+        <translation>jag är skyldig dem</translation>
     </message>
     <message>
         <source>Who</source>
@@ -567,11 +564,11 @@
     </message>
     <message>
         <source>Worth today</source>
-        <translation>Värde i dag</translation>
+        <translation>Värde idag</translation>
     </message>
     <message>
         <source>Balance today</source>
-        <translation>Saldo i dag</translation>
+        <translation>Saldo idag</translation>
     </message>
     <message>
         <source>Your part: %1</source>
@@ -614,7 +611,7 @@
     </message>
     <message>
         <source>A savings account, a buffer, funds, a pension</source>
-        <translation>Ett sparkonto, en buffert, fonder, en pension</translation>
+        <translation>Sparkonto, buffert, fonder, pension</translation>
     </message>
     <message>
         <source>Something you own</source>
@@ -622,15 +619,15 @@
     </message>
     <message>
         <source>A home, a car, an instrument. You update its value when you like.</source>
-        <translation>En bostad, en bil, ett instrument. Du uppdaterar värdet när du vill.</translation>
+        <translation>Ett hem, en bil, ett instrument. Du uppdaterar värdet när du vill.</translation>
     </message>
     <message>
         <source>A loan or credit</source>
-        <translation>Ett lån eller en kredit</translation>
+        <translation>Lån eller kredit</translation>
     </message>
     <message>
         <source>A new loan, a mortgage, a card, a loan from a person</source>
-        <translation>Ett nytt lån, ett bolån, ett kort, ett lån från en person</translation>
+        <translation>Nytt lån, bolån, kort eller lån från en person</translation>
     </message>
     <message>
         <source>Between people</source>
@@ -638,7 +635,7 @@
     </message>
     <message>
         <source>Someone owes you, or you owe someone</source>
-        <translation>Någon är skyldig dig, eller du är skyldig någon</translation>
+        <translation>Någon är skyldig dig, eller du någon</translation>
     </message>
 </context>
 <context>
@@ -704,7 +701,7 @@
     </message>
     <message>
         <source>Balance today</source>
-        <translation>Saldo i dag</translation>
+        <translation>Saldo idag</translation>
     </message>
     <message>
         <source>Your part (%1): %2</source>
@@ -727,7 +724,7 @@
     <name>BreakdownPage</name>
     <message>
         <source>Not sorted</source>
-        <translation>Ej sorterat</translation>
+        <translation>Osorterat</translation>
     </message>
     <message>
         <source>paying off</source>
@@ -739,7 +736,7 @@
     </message>
     <message>
         <source>%1 rows</source>
-        <translation>%1 rader</translation>
+        <translation>rader: %1</translation>
     </message>
     <message>
         <source>Directly in %1</source>
@@ -763,7 +760,7 @@
     </message>
     <message>
         <source>Paid off beside it</source>
-        <translation>Amorterat vid sidan av</translation>
+        <translation>Amorterat vid sidan om</translation>
     </message>
     <message>
         <source>The interest is in the list above. What is paid off is not an expense: it lowers the loan. Not counted in the sum.</source>
@@ -771,7 +768,7 @@
     </message>
     <message>
         <source>all %1 rows</source>
-        <translation>alla %1 rader</translation>
+        <translation>alla rader (%1)</translation>
     </message>
 </context>
 <context>
@@ -802,7 +799,7 @@
     </message>
     <message>
         <source>Standard names follow the language. Your own name wins.</source>
-        <translation>Standardnamn följer språket. Ditt eget namn gäller först.</translation>
+        <translation>Standardnamn följer språket. Ditt eget namn går före.</translation>
     </message>
 </context>
 <context>
@@ -813,7 +810,7 @@
     </message>
     <message>
         <source>a new category</source>
-        <translation>en ny kategori</translation>
+        <translation>ny kategori</translation>
     </message>
     <message>
         <source>Name</source>
@@ -821,11 +818,11 @@
     </message>
     <message>
         <source>Inside</source>
-        <translation>Under</translation>
+        <translation>Inom</translation>
     </message>
     <message>
         <source>nothing, a main category</source>
-        <translation>inget, en huvudkategori</translation>
+        <translation>ingen, en huvudkategori</translation>
     </message>
     <message>
         <source>Counts as</source>
@@ -837,7 +834,7 @@
     </message>
     <message>
         <source>Needs, wants or saving. Sets the colour on the month bar.</source>
-        <translation>Behov, önskemål eller sparande. Styr färgen i månadsstapeln.</translation>
+        <translation>Måsten, villhöver eller sparande. Styr färgen i månadsstapeln.</translation>
     </message>
 </context>
 <context>
@@ -855,7 +852,7 @@
     <name>CategoryTxnsPage</name>
     <message>
         <source>%1 rows</source>
-        <translation>%1 rader</translation>
+        <translation>rader: %1</translation>
     </message>
 </context>
 <context>
@@ -866,7 +863,7 @@
     </message>
     <message>
         <source>practice run</source>
-        <translation>provkörning</translation>
+        <translation>övning</translation>
     </message>
     <message>
         <source>end</source>
@@ -925,7 +922,7 @@
     </message>
     <message>
         <source>today</source>
-        <translation>i dag</translation>
+        <translation>idag</translation>
     </message>
     <message>
         <source>as planned, %1</source>
@@ -973,19 +970,110 @@
     </message>
     <message>
         <source>The electricity cost more than guessed. Write 350 and confirm. Under Next time you choose whether to count on 350 from now on.</source>
-        <translation>Elen kostade mer än gissat. Skriv 350 och bekräfta. Under Nästa gång väljer du om du räknar med 350 framöver.</translation>
+        <translation>Elen blev dyrare än gissat. Skriv 350 och bekräfta. Under Nästa gång väljer du om du räknar med 350 framöver.</translation>
     </message>
 </context>
 <context>
     <name>CoverPage</name>
     <message>
         <source>left · %1 days</source>
-        <extracomment>Cover, under what is left: "left · 12 days"</extracomment>
-        <translation>kvar · %1 dagar</translation>
+        <extracomment>Cover, under what is left: &quot;left · 12 days&quot;</extracomment>
+        <translation>kvar · %1 d</translation>
     </message>
     <message>
         <source>not set up</source>
-        <translation>inte inställd</translation>
+        <translation>inte igång</translation>
+    </message>
+</context>
+<context>
+    <name>Demo</name>
+    <message>
+        <source>Card</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swish</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Buffer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Funds</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Home</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mortgage</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Student loan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Electricity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Broadband</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mobile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gym</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Car insurance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Home insurance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To the buffer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Salary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Grocery shop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restaurant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clothes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dinner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Coffee</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1003,11 +1091,11 @@
     <name>ExportImportPage</name>
     <message>
         <source>Nothing was changed: %1</source>
-        <translation>Ingenting ändrades: %1</translation>
+        <translation>Inget ändrades: %1</translation>
     </message>
     <message>
         <source>Done. %1 rows added, %2 updated, %3 already up to date.</source>
-        <translation>Klart. %1 rader tillagda, %2 uppdaterade, %3 redan aktuella.</translation>
+        <translation>Klart. %1 rader lades till, %2 uppdaterades, %3 var redan aktuella.</translation>
     </message>
     <message>
         <source>Replacing everything</source>
@@ -1019,7 +1107,7 @@
     </message>
     <message>
         <source>One open JSON file with every row: months, places, values, what comes back, and what earlier imports brought in. It is the backup, the way to a new phone, and the way out.</source>
-        <translation>En öppen JSON-fil med varenda rad: månader, ställen, värden, det som kommer tillbaka och det tidigare importer tog in. Den är säkerhetskopian, vägen till en ny telefon och vägen ut.</translation>
+        <translation>En öppen JSON-fil med varje rad: månader, konton, värden, det som återkommer och det som tidigare importer tagit med. Den är säkerhetskopian, vägen till en ny telefon och vägen ut.</translation>
     </message>
     <message>
         <source>export everything</source>
@@ -1027,15 +1115,15 @@
     </message>
     <message>
         <source>Saved to %1</source>
-        <translation>Sparad i %1</translation>
+        <translation>Sparat i %1</translation>
     </message>
     <message>
         <source>Could not write the file.</source>
-        <translation>Kunde inte skriva filen.</translation>
+        <translation>Det gick inte att skriva filen.</translation>
     </message>
     <message>
         <source>only the rows, as CSV for a spreadsheet</source>
-        <translation>bara raderna, som CSV för ett kalkylark</translation>
+        <translation>bara raderna, som CSV för kalkylark</translation>
     </message>
     <message>
         <source>Bring it in</source>
@@ -1062,7 +1150,7 @@
     <name>ForecastPage</name>
     <message>
         <source>the next %1 months</source>
-        <translation>de närmaste %1 månaderna</translation>
+        <translation>kommande %1 månader</translation>
     </message>
     <message>
         <source>No salary is planned after this month, so nothing is left to compare with. Add the salary as repeating and it shows here.</source>
@@ -1070,7 +1158,7 @@
     </message>
     <message>
         <source>Out is what is planned plus what is already spent. A cost that is only on one day, like an invoice, is added with Plan a cost. How far ahead it plans is set in Settings.</source>
-        <translation>Ut är planerat plus redan spenderat. En kostnad som bara gäller en dag, som en faktura, läggs in med Planera en kostnad. Hur långt framåt det planeras ställer du in i Inställningar.</translation>
+        <translation>Utgifter är planerat plus redan spenderat. En kostnad som bara gäller en dag, som en faktura, läggs in med Lägg till planerat. Hur långt framåt det planeras ställer du in i Inställningar.</translation>
     </message>
     <message>
         <source>Recurring</source>
@@ -1101,11 +1189,11 @@
     </message>
     <message>
         <source>%1 months so far</source>
-        <translation>%1 månader hittills</translation>
+        <translation>månader hittills: %1</translation>
     </message>
     <message>
         <source>%1 months</source>
-        <translation>%1 månader</translation>
+        <translation>månader: %1</translation>
     </message>
     <message>
         <source>The average is salary per month that had a salary, in %1. Bonuses and back pay paid as salary lift a year.</source>
@@ -1117,7 +1205,7 @@
     </message>
     <message>
         <source>Other income, whole year</source>
-        <translation>Övrig inkomst, helt år</translation>
+        <translation>Övrig inkomst, hela året</translation>
     </message>
     <message>
         <source>No salary yet. Add it as salary and it shows here.</source>
@@ -1139,7 +1227,7 @@
         <translation>Mellan personer</translation>
     </message>
     <message>
-        <source>the month's money</source>
+        <source>the month&apos;s money</source>
         <translation>månadens pengar</translation>
     </message>
     <message>
@@ -1172,7 +1260,7 @@
     </message>
     <message>
         <source>belongings</source>
-        <translation>ägodelar</translation>
+        <translation>tillhörigheter</translation>
     </message>
     <message>
         <source>loan</source>
@@ -1274,7 +1362,7 @@
     </message>
     <message>
         <source>Only the debt as it stands today. No money moves.</source>
-        <translation>Bara skulden som den ser ut i dag. Inga pengar rör sig.</translation>
+        <translation>Bara skulden som den är idag. Inga pengar flyttas.</translation>
     </message>
     <message>
         <source>Interest, % a year</source>
@@ -1282,7 +1370,7 @@
     </message>
     <message>
         <source>Paying off each month</source>
-        <translation>Amortering per månad</translation>
+        <translation>Amortering varje månad</translation>
     </message>
     <message>
         <source>What this writes</source>
@@ -1302,7 +1390,7 @@
     </message>
     <message>
         <source>into this month, not income</source>
-        <translation>in i den här månaden, inte inkomst</translation>
+        <translation>in i denna månad, inte inkomst</translation>
     </message>
     <message>
         <source>Who</source>
@@ -1334,7 +1422,7 @@
     </message>
     <message>
         <source>existing</source>
-        <translation>befintligt</translation>
+        <translation>befintlig</translation>
     </message>
     <message>
         <source>Added to this month, not income. The debt is under Loans.</source>
@@ -1345,7 +1433,7 @@
         <translation>Som en bostad eller en bil. Lägg till själva saken under Saker om den saknas.</translation>
     </message>
     <message>
-        <source>Variable? Write today's. You confirm each payment with the real amount.</source>
+        <source>Variable? Write today&apos;s. You confirm each payment with the real amount.</source>
         <translation>Varierar det? Skriv dagens. Du bekräftar varje betalning med det verkliga beloppet.</translation>
     </message>
     <message>
@@ -1369,7 +1457,7 @@
     </message>
     <message>
         <source>Follow ambience</source>
-        <translation>Följ ambiensen</translation>
+        <translation>Följ ambiens</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -1377,7 +1465,7 @@
     </message>
     <message>
         <source>practice run</source>
-        <translation>provkörning</translation>
+        <translation>övning</translation>
     </message>
     <message>
         <source>day %1 of %2 · %3 days left</source>
@@ -1397,15 +1485,15 @@
     </message>
     <message>
         <source>%1 + %2 to come</source>
-        <translation>%1 + %2 på väg</translation>
+        <translation>%1 + %2 kommer</translation>
     </message>
     <message>
         <source>Coming up</source>
-        <translation>På väg</translation>
+        <translation>Kommande</translation>
     </message>
     <message>
         <source>paid as expected</source>
-        <translation>betald som väntat</translation>
+        <translation>betalt som väntat</translation>
     </message>
     <message>
         <source>Skipping</source>
@@ -1417,7 +1505,7 @@
     </message>
     <message>
         <source>all %1 this month</source>
-        <translation>alla %1 denna månad</translation>
+        <translation>alla denna månad (%1)</translation>
     </message>
     <message>
         <source>next</source>
@@ -1472,7 +1560,7 @@
         <translation>Trender: en månad, tre månader eller ett år, varje kategori bredvid det som är typiskt för dig.</translation>
     </message>
     <message>
-        <source>That's it. When you start for real, the made-up numbers are gone.</source>
+        <source>That&apos;s it. When you start for real, the made-up numbers are gone.</source>
         <translation>Det var allt. När du börjar på riktigt är de påhittade siffrorna borta.</translation>
     </message>
     <message>
@@ -1515,7 +1603,7 @@
 <context>
     <name>ScheduleDialog</name>
     <message>
-        <source>the month's money</source>
+        <source>the month&apos;s money</source>
         <translation>månadens pengar</translation>
     </message>
     <message>
@@ -1572,7 +1660,7 @@
     </message>
     <message>
         <source>Starting in</source>
-        <translation>Med början i</translation>
+        <translation>Börjar i</translation>
     </message>
     <message>
         <source>Day of the month</source>
@@ -1596,11 +1684,11 @@
     </message>
     <message>
         <source>delete, with what is still planned</source>
-        <translation>radera, med det som fortfarande är planerat</translation>
+        <translation>ta bort, med det som fortfarande är planerat</translation>
     </message>
     <message>
         <source>Deleting</source>
-        <translation>Raderar</translation>
+        <translation>Tar bort</translation>
     </message>
     <message>
         <source>recurring</source>
@@ -1670,7 +1758,7 @@
         <translation>varje vecka</translation>
     </message>
     <message>
-        <source>the month's money</source>
+        <source>the month&apos;s money</source>
         <translation>månadens pengar</translation>
     </message>
     <message>
@@ -1679,11 +1767,11 @@
     </message>
     <message>
         <source>delete</source>
-        <translation>radera</translation>
+        <translation>ta bort</translation>
     </message>
     <message>
         <source>about %1 a month</source>
-        <translation>ungefär %1 i månaden</translation>
+        <translation>ca %1 i månaden</translation>
     </message>
     <message>
         <source>Every month</source>
@@ -1766,7 +1854,7 @@
     </message>
     <message>
         <source>Payday, day of the month</source>
-        <translation>Lönedag, dag i månaden</translation>
+        <translation>Löningsdag, dag i månaden</translation>
     </message>
     <message>
         <source>Currency</source>
@@ -1778,15 +1866,15 @@
     </message>
     <message>
         <source>Contexts</source>
-        <translation>Sammanhang</translation>
+        <translation>Kontext</translation>
     </message>
     <message>
         <source>contexts</source>
-        <translation>sammanhang</translation>
+        <translation>kontext</translation>
     </message>
     <message>
         <source>Travel, work, a project. Optional.</source>
-        <translation>Resa, jobb, ett projekt. Frivilligt.</translation>
+        <translation>Resa, jobb, ett projekt. Valfritt.</translation>
     </message>
     <message>
         <source>People</source>
@@ -1885,7 +1973,7 @@
     </message>
     <message>
         <source>Payday, day of the month</source>
-        <translation>Lönedag, dag i månaden</translation>
+        <translation>Löningsdag, dag i månaden</translation>
     </message>
     <message>
         <source>Currency</source>
@@ -1901,15 +1989,15 @@
     </message>
     <message>
         <source>only the essentials</source>
-        <translation>bara de nödvändigaste</translation>
+        <translation>bara det viktigaste</translation>
     </message>
     <message>
         <source>start</source>
-        <translation>börja</translation>
+        <translation>starta</translation>
     </message>
     <message>
         <source>set up</source>
-        <translation>kom igång</translation>
+        <translation>start</translation>
     </message>
     <message>
         <source>salary arrives</source>
@@ -1917,11 +2005,11 @@
     </message>
     <message>
         <source>The month starts when the salary arrives. Until then, payday is the guess.</source>
-        <translation>Månaden börjar när lönen kommer. Fram till dess är löndagen gissningen.</translation>
+        <translation>Månaden börjar när lönen kommer. Fram till dess är löningsdagen gissningen.</translation>
     </message>
     <message>
         <source>Methods, contexts and people are added when you first need them. Change anything in settings.</source>
-        <translation>Betalsätt, sammanhang och personer läggs till när du först behöver dem. Ändra allt i inställningar.</translation>
+        <translation>Betalsätt, kontext och personer läggs till när du först behöver dem. Ändra allt i inställningar.</translation>
     </message>
 </context>
 <context>
@@ -1929,15 +2017,15 @@
     <message>
         <source>%1 rows</source>
         <extracomment>Number of rows in a month</extracomment>
-        <translation>%1 rader</translation>
+        <translation>rader: %1</translation>
     </message>
     <message>
         <source>paid as expected</source>
-        <translation>betald som väntat</translation>
+        <translation>betalt som väntat</translation>
     </message>
     <message>
         <source>delete</source>
-        <translation>radera</translation>
+        <translation>ta bort</translation>
     </message>
     <message>
         <source>Nothing this month yet.</source>
@@ -1955,7 +2043,7 @@
 <context>
     <name>TxnRow</name>
     <message>
-        <source>the month's money</source>
+        <source>the month&apos;s money</source>
         <translation>månadens pengar</translation>
     </message>
     <message>
@@ -1972,7 +2060,7 @@
     </message>
     <message>
         <source>of %1</source>
-        <extracomment>Under a shared amount, the whole price: "of 840"</extracomment>
+        <extracomment>Under a shared amount, the whole price: &quot;of 840&quot;</extracomment>
         <translation>av %1</translation>
     </message>
     <message>
@@ -1992,7 +2080,7 @@
     </message>
     <message>
         <source>today</source>
-        <translation>i dag</translation>
+        <translation>idag</translation>
     </message>
     <message>
         <source>Total</source>
@@ -2011,11 +2099,11 @@
     <name>WelcomePage</name>
     <message>
         <source>That file could not be read: %1</source>
-        <translation>Filen kunde inte läsas: %1</translation>
+        <translation>Filen gick inte att läsa: %1</translation>
     </message>
     <message>
-        <source>The file was read, but it holds no month's money.</source>
-        <translation>Filen lästes, men den innehåller inga månadens pengar.</translation>
+        <source>The file was read, but it holds no month&apos;s money.</source>
+        <translation>Filen lästes, men den innehåller inga månadspengar.</translation>
     </message>
     <message>
         <source>Money from one salary to the next.</source>

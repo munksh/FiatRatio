@@ -55,15 +55,6 @@ Page {
                 x: Theme.horizontalPageMargin
                 width: content.width - Theme.horizontalPageMargin * 2
                 wrapMode: Text.WordWrap
-                font.pixelSize: Theme.fontSizeExtraSmall
-                color: FiatRatioTheme.secondaryText
-                text: qsTr("Everything goes out to one open file and comes back in from it: to a new phone, to another program, or out of the app altogether.")
-            }
-
-            Label {
-                x: Theme.horizontalPageMargin
-                width: content.width - Theme.horizontalPageMargin * 2
-                wrapMode: Text.WordWrap
                 textFormat: Text.StyledText
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: FiatRatioTheme.secondaryText
@@ -216,11 +207,11 @@ Page {
                     { name: "fiat glossa", what: qsTr("let there be tongue — a translator"), icon: "images/family/harbour-fiatglossa.png", url: "https://openrepos.net/content/munkstolen/fiat-glossa-a-deepl-translator" },
                     { name: "fiat vox", what: qsTr("let there be voice — a chromatic tuner"), icon: "images/family/harbour-fiatvox.png", url: "https://openrepos.net/content/munkstolen/fiat-vox-chromatic-tuner" },
                     { name: "fiat pons", what: qsTr("let there be bridge — a native Qobuz client"), icon: "images/family/harbour-fiatpons.png", url: "https://openrepos.net/content/munkstolen/fiat-pons-native-qobuz-client" },
-                    { name: "fiat lux", what: qsTr("let there be light — a light meter for film - Coming soon"), icon: "images/family/harbour-fiatlux.png", url: "" },
+                    { name: "fiat lux", what: qsTr("let there be light — a light meter for film"), icon: "images/family/harbour-fiatlux.png", url: "" },
                     { name: "fiat cor", what: qsTr("let there be heart — a metronome"), icon: "images/family/harbour-fiatcor.png", url: "https://openrepos.net/content/munkstolen/fiat-cor-a-metronome" },
                     { name: "fiat passus", what: qsTr("let there be step — a step counter - Coming soon"), icon: "images/family/harbour-fiatpassus.png", url: "" },
                     { name: "fiat mos", what: qsTr("let there be habit — a habit tracker"), icon: "images/family/harbour-fiatmos.png", url: "https://openrepos.net/content/munkstolen/fiat-mos-habit-tracker" },
-                    { name: "fiat imago", what: qsTr("let there be image — a photo editor - Coming soon"), icon: "images/family/harbour-fiatimago.png", url: "" },
+                    { name: "fiat imago", what: qsTr("let there be image — a photo editor"), icon: "images/family/harbour-fiatimago.png", url: "" },
                     { name: "fiat ratio", what: qsTr("let there be reckoning — this one"), icon: "images/family/harbour-fiatratio.png", url: "" }
                 ]
 

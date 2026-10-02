@@ -63,9 +63,8 @@ licensefile.files = $$PWD/LICENSE
 licensefile.path = /usr/share/licenses/$${TARGET}
 INSTALLS += licensefile
 
-# sv and en are kept by the author in this repository. de and ru are open for
-# the community (Weblate). harbour-fiatratio-en.ts exists so an English override
-# can win over a phone set to another language.
+# All four languages are kept by the author. harbour-fiatratio-en.ts exists so
+# an English override can win over a phone set to another language.
 TRANSLATIONS += \
     translations/harbour-fiatratio-en.ts \
     translations/harbour-fiatratio-sv.ts \

@@ -1,6 +1,6 @@
 # Fiat Ratio
 
-Money for Sailfish OS, the Fiat way. A budget month that starts when the salary arrives, or on the 1st. Shared costs are entered at the full price and only your part counts. Savings, investments, a home and loans all add up to one net worth. Everything goes out to one open file, and comes back in from it.
+Money for Sailfish OS, the Fiat way. Built on a personal finance database kept since 2022, made into an app when the Jolla Phone arrived. A budget month that starts when the salary arrives, or on the 1st. Shared costs are entered at the full price and only your part counts. Savings, investments, a home and loans all add up to one net worth. Everything goes out to one open file, and comes back in from it.
 
 Part of the Fiat family. MIT licence.
 
@@ -48,7 +48,7 @@ The `.pro` file refuses to build until they are in place. Run the script again w
 
 ## Translations
 
-The language follows the phone. Settings › Language overrides it on purpose, and the change takes effect at once. English and Swedish are kept by the author in this repository. German and Russian are open to improvement, through Weblate once the project is there and through pull requests on `translations/*-de.ts` and `*-ru.ts` until then. Finnish isn't shipped.
+The language follows the phone. Settings › Language overrides it on purpose, and the change takes effect at once. All four languages are kept by the author, who speaks them. Corrections are welcome as pull requests on `translations/*.ts`, and for the standard categories on `tools/make_standard.py`. Finnish isn't shipped.
 
 After changing strings in QML:
 

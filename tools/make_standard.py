@@ -4,8 +4,8 @@ Writes qml/data/standard.json, which the app reads at start. The database keeps
 only a category's key (plus a name, when the user renamed it), so a phone in
 another language shows these names in that language.
 
-Columns: en sv de ru fr. en and sv are kept by the author. de and ru are open
-to the community. fr is drafted but not shipped: add "fr" to SHIPPED (and a
+Columns: en sv de ru fr. en, sv, de and ru are kept by the author. fr is
+drafted but not shipped: add "fr" to SHIPPED (and a
 translations/harbour-fiatratio-fr.ts) when someone looks after it.
 
     python3 tools/make_standard.py"""
@@ -13,27 +13,27 @@ import json, os
 
 SHIPPED = ["en", "sv", "de", "ru"]
 COLUMNS = ["en", "sv", "de", "ru", "fr"]
-MAINTAINED = {"en": "author", "sv": "author", "de": "community", "ru": "community"}
+MAINTAINED = {"en": "author", "sv": "author", "de": "author", "ru": "author"}
 
 B = {  # buckets
- "needs": ["Needs", "Behov", "Bedarf", "Необходимое", "Besoins"],
- "wants": ["Wants", "Önskemål", "Wünsche", "Желания", "Envies"],
+ "needs": ["Needs", "Måsten", "Müssen", "Надо", "Besoins"],
+ "wants": ["Wants", "Villhöver", "Wollen", "Хочу", "Envies"],
  "savings": ["Savings", "Sparande", "Sparen", "Сбережения", "Épargne"],
- "technical": ["Technical", "Tekniskt", "Technisches", "Технические", "Technique"],
- "exceptional": ["Exceptional", "Oförutsett", "Außergewöhnlich", "Непредвиденное", "Exceptionnel"],
+ "technical": ["Technical", "Justeringar", "Anpassungen", "Корректировки", "Technique"],
+ "exceptional": ["Exceptional", "Extraordinärt", "Außerordentliches", "Чрезвычайное", "Exceptionnel"],
 }
 # key, kind, parent, bucket, then names in COLUMNS order
 C = [
  ("food", "expense", None, "needs", "Food", "Mat", "Essen", "Еда", "Alimentation"),
- ("groceries", "expense", "food", "needs", "Groceries", "Livsmedel", "Lebensmittel", "Продукты", "Courses"),
+ ("groceries", "expense", "food", "needs", "Groceries", "Matvaror", "Lebensmittel", "Продукты", "Courses"),
  ("restaurant", "expense", "food", "wants", "Restaurants", "Restaurang", "Restaurant", "Рестораны", "Restaurants"),
  ("fika", "expense", "food", "wants", "Coffee and fika", "Fika", "Kaffee und Kuchen", "Кофе и перекусы", "Cafés"),
  ("snacks", "expense", "food", "wants", "Snacks and fast food", "Snacks och snabbmat", "Snacks und Fast Food", "Снеки и фастфуд", "Grignotage et fast-food"),
  ("alcohol", "expense", "food", "wants", "Alcohol", "Alkohol", "Alkohol", "Алкоголь", "Alcool"),
- ("home", "expense", None, "needs", "Home", "Boende", "Wohnen", "Жильё", "Logement"),
+ ("home", "expense", None, "needs", "Home", "Hem", "Zuhause", "Дом", "Logement"),
  ("rent", "expense", "home", "needs", "Rent", "Hyra", "Miete", "Аренда", "Loyer"),
  ("housing", "expense", "home", "needs", "Housing costs", "Boendekostnader", "Wohnnebenkosten", "Коммунальные расходы", "Charges du logement"),
- ("mortgage_interest", "expense", "home", "needs", "Mortgage interest", "Ränta på bolån", "Hypothekenzinsen", "Проценты по ипотеке", "Intérêts du prêt immobilier"),
+ ("mortgage_interest", "expense", "home", "needs", "Mortgage interest", "Bolåneränta", "Hypothekenzinsen", "Проценты по ипотеке", "Intérêts du prêt immobilier"),
  ("household", "expense", "home", "needs", "Household", "Hushåll", "Haushalt", "Хозяйство", "Ménage"),
  ("maintenance", "expense", "home", "needs", "Maintenance", "Underhåll", "Instandhaltung", "Обслуживание", "Entretien"),
  ("repairs", "expense", "home", "needs", "Repairs", "Reparationer", "Reparaturen", "Ремонт", "Réparations"),
@@ -45,7 +45,7 @@ C = [
  ("fuel", "expense", "transport", "needs", "Fuel", "Drivmedel", "Kraftstoff", "Топливо", "Carburant"),
  ("parking", "expense", "transport", "needs", "Parking", "Parkering", "Parken", "Парковка", "Stationnement"),
  ("taxi", "expense", "transport", "wants", "Taxi", "Taxi", "Taxi", "Такси", "Taxi"),
- ("transport_fees", "expense", "transport", "needs", "Tolls and fees", "Avgifter och tullar", "Gebühren und Maut", "Сборы и пошлины", "Péages et frais"),
+ ("transport_fees", "expense", "transport", "needs", "Tolls and fees", "Vägtullar och avgifter", "Maut und Gebühren", "Платные дороги и сборы", "Péages et frais"),
  ("travel", "expense", None, "wants", "Travel", "Resor", "Reisen", "Путешествия", "Voyages"),
  ("travel_flights", "expense", "travel", "wants", "Flights", "Flyg", "Flüge", "Авиабилеты", "Vols"),
  ("travel_train", "expense", "travel", "wants", "Train", "Tåg", "Bahn", "Поезд", "Train"),
@@ -62,17 +62,17 @@ C = [
  ("hobbies", "expense", "leisure", "wants", "Hobbies", "Hobbyer", "Hobbys", "Хобби", "Loisirs créatifs"),
  ("books", "expense", "leisure", "wants", "Books", "Böcker", "Bücher", "Книги", "Livres"),
  ("education", "expense", "leisure", "wants", "Education", "Utbildning", "Bildung", "Образование", "Formation"),
- ("gambling", "expense", "leisure", "wants", "Gambling", "Spel", "Glücksspiel", "Азартные игры", "Jeux d'argent"),
+ ("gambling", "expense", "leisure", "wants", "Gambling", "Spel och lotter", "Glücksspiel", "Азартные игры и лотереи", "Jeux d'argent"),
  ("social_club", "expense", "leisure", "wants", "Clubs and societies", "Föreningar", "Vereine", "Клубы и общества", "Associations"),
  ("shopping", "expense", None, "wants", "Shopping", "Shopping", "Einkäufe", "Покупки", "Achats"),
  ("clothes", "expense", "shopping", "wants", "Clothes", "Kläder", "Kleidung", "Одежда", "Vêtements"),
  ("computer_phone", "expense", "shopping", "needs", "Computer and phone", "Dator och telefon", "Computer und Telefon", "Компьютер и телефон", "Ordinateur et téléphone"),
- ("it", "expense", "shopping", "wants", "Software and services", "Programvara och tjänster", "Software und Dienste", "Программы и сервисы", "Logiciels et services"),
+ ("it", "expense", "shopping", "wants", "Software and services", "Digitala verktyg", "Digitale Werkzeuge", "Цифровые инструменты", "Logiciels et services"),
  ("tech", "expense", "shopping", "wants", "Electronics", "Elektronik", "Elektronik", "Электроника", "Électronique"),
  ("giving", "expense", None, "wants", "Giving", "Gåvor", "Schenken", "Подарки", "Dons"),
  ("gifts", "expense", "giving", "wants", "Gifts", "Presenter", "Geschenke", "Подарки", "Cadeaux"),
  ("charity", "expense", "giving", "wants", "Charity", "Välgörenhet", "Spenden", "Благотворительность", "Dons caritatifs"),
- ("finance", "expense", None, "technical", "Finance", "Ekonomi", "Finanzen", "Финансы", "Finances"),
+ ("finance", "expense", None, "technical", "Finance", "Finanser", "Finanzen", "Финансы", "Finances"),
  ("insurance", "expense", "finance", "needs", "Insurance", "Försäkring", "Versicherung", "Страхование", "Assurances"),
  ("bank_fees", "expense", "finance", "technical", "Bank fees", "Bankavgifter", "Bankgebühren", "Банковские комиссии", "Frais bancaires"),
  ("loan_interest", "expense", "finance", "technical", "Loan interest", "Låneränta", "Kreditzinsen", "Проценты по кредитам", "Intérêts d'emprunt"),
@@ -85,7 +85,7 @@ C = [
  ("side_income", "income", None, None, "Side income", "Extrainkomst", "Nebeneinkommen", "Подработка", "Revenus annexes"),
  ("music_income", "income", None, None, "Music income", "Musikintäkter", "Musikeinnahmen", "Доходы от музыки", "Revenus musicaux"),
  ("sold_items", "income", None, None, "Sold items", "Sålt", "Verkäufe", "Продажи вещей", "Ventes d'objets"),
- ("gifts_received", "income", None, None, "Gifts received", "Fått i gåva", "Geschenke erhalten", "Полученные подарки", "Cadeaux reçus"),
+ ("gifts_received", "income", None, None, "Gifts received", "Gåva", "Geschenke", "Подарки", "Cadeaux reçus"),
  ("interest_income", "income", None, None, "Interest", "Ränteintäkter", "Zinserträge", "Процентный доход", "Intérêts perçus"),
  ("dividends", "income", None, None, "Dividends", "Utdelning", "Dividenden", "Дивиденды", "Dividendes"),
  ("tax_refund", "income", None, None, "Tax refund", "Skatteåterbäring", "Steuererstattung", "Возврат налога", "Remboursement d'impôt"),
