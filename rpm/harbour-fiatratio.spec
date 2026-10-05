@@ -1,6 +1,6 @@
 Name:       harbour-fiatratio
 Summary:    fiat ratio – money from one salary to the next
-Version:    1.0
+Version:    1.1
 Release:    1
 License:    MIT
 URL:        https://github.com/munksh/FiatRatio
@@ -65,3 +65,9 @@ desktop-file-install --delete-original \
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 %license %{_datadir}/licenses/%{name}/LICENSE
+
+%changelog
+* Mon Oct 05 2026 Caesar Prometheus Ivarsson <caesar@munkstolen.se> - 1.1-1
+- The About page lists the whole fiat family with full-size icons, and the
+  package carries metadata for SailfishOS:Chum: title, icon and screenshots.
+
