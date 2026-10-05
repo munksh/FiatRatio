@@ -20,6 +20,29 @@ the full price, with only your part counted. What comes back is planned
 into the months ahead. Savings, a home and loans in one net worth, and
 everything in one open file you can take anywhere.
 
+%if 0%{?_chum}
+Title: Fiat Ratio
+Type: desktop-application
+DeveloperName: Munkstolen
+Categories:
+ - Office
+ - Utility
+PackageIcon: https://munkstolen.se/SFOS/harbour-fiatratio.png
+Screenshots:
+ - https://munkstolen.se/SFOS/fiatratio1.png
+ - https://munkstolen.se/SFOS/fiatratio2.png
+ - https://munkstolen.se/SFOS/fiatratio3.png
+ - https://munkstolen.se/SFOS/fiatratio4.png
+ - https://munkstolen.se/SFOS/fiatratio5.png
+ - https://munkstolen.se/SFOS/fiatratio6.png
+ - https://munkstolen.se/SFOS/fiatratio7.png
+Custom:
+  Repo: https://github.com/munksh/FiatRatio
+Links:
+  Homepage: https://github.com/munksh/FiatRatio
+  Bugtracker: https://github.com/munksh/FiatRatio/issues
+%endif
+
 %prep
 %setup -q -n %{name}-%{version}
 

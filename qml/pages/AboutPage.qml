@@ -48,7 +48,7 @@ Page {
                 wrapMode: Text.WordWrap
                 font.pixelSize: Theme.fontSizeExtraSmall
                 color: FiatRatioTheme.secondaryText
-                text: qsTr("fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Shared costs are entered at the full price and only your part counts. Savings, a home and loans add up to one net worth.")
+                text: qsTr("fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Recurring costs are planned ahead, and savings, a home and loans add up to one net worth.")
             }
 
             Label {
@@ -198,7 +198,12 @@ Page {
                 }
             }
 
-            SectionLabel { x: Theme.horizontalPageMargin; text: qsTr("The fiat family") }
+            // -- The family ---------------------------------------------------
+
+            SectionLabel {
+                x: Theme.horizontalPageMargin
+                text: qsTr("The fiat family")
+            }
 
             Repeater {
                 model: [
@@ -207,14 +212,17 @@ Page {
                     { name: "fiat glossa", what: qsTr("let there be tongue — a translator"), icon: "images/family/harbour-fiatglossa.png", url: "https://openrepos.net/content/munkstolen/fiat-glossa-a-deepl-translator" },
                     { name: "fiat vox", what: qsTr("let there be voice — a chromatic tuner"), icon: "images/family/harbour-fiatvox.png", url: "https://openrepos.net/content/munkstolen/fiat-vox-chromatic-tuner" },
                     { name: "fiat pons", what: qsTr("let there be bridge — a native Qobuz client"), icon: "images/family/harbour-fiatpons.png", url: "https://openrepos.net/content/munkstolen/fiat-pons-native-qobuz-client" },
-                    { name: "fiat lux", what: qsTr("let there be light — a light meter for film"), icon: "images/family/harbour-fiatlux.png", url: "" },
+                    { name: "fiat lux", what: qsTr("let there be light — a light meter for film"), icon: "images/family/harbour-fiatlux.png", url: "https://openrepos.net/content/munkstolen/fiat-lux-lightmeter-film-photography" },
                     { name: "fiat cor", what: qsTr("let there be heart — a metronome"), icon: "images/family/harbour-fiatcor.png", url: "https://openrepos.net/content/munkstolen/fiat-cor-a-metronome" },
                     { name: "fiat passus", what: qsTr("let there be step — a step counter - Coming soon"), icon: "images/family/harbour-fiatpassus.png", url: "" },
                     { name: "fiat mos", what: qsTr("let there be habit — a habit tracker"), icon: "images/family/harbour-fiatmos.png", url: "https://openrepos.net/content/munkstolen/fiat-mos-habit-tracker" },
-                    { name: "fiat imago", what: qsTr("let there be image — a photo editor"), icon: "images/family/harbour-fiatimago.png", url: "" },
+                    { name: "fiat imago", what: qsTr("let there be image — a raw editor"), icon: "images/family/harbour-fiatimago.png", url: "https://openrepos.net/content/munkstolen/fiat-imago-raw-editor" },
                     { name: "fiat ratio", what: qsTr("let there be reckoning — this one"), icon: "images/family/harbour-fiatratio.png", url: "" }
                 ]
 
+                // A full-size icon in a row of its own height, rather than an
+                // icon shrunk to the height of two lines of text. The icon is
+                // the app's face; it should be readable.
                 delegate: BackgroundItem {
                     width: content.width
                     height: Theme.itemSizeMedium
@@ -231,59 +239,87 @@ Page {
                         sourceSize.width: Theme.itemSizeSmall
                         sourceSize.height: Theme.itemSizeSmall
                         fillMode: Image.PreserveAspectFit
-                        source: modelData.icon
+                        smooth: true
+                        source: Qt.resolvedUrl(modelData.icon)
                     }
+
                     Column {
                         anchors.left: familyIcon.right
                         anchors.leftMargin: Theme.paddingLarge
                         anchors.right: parent.right
                         anchors.rightMargin: Theme.horizontalPageMargin
                         anchors.verticalCenter: parent.verticalCenter
+
                         Label {
                             width: parent.width
-                            text: modelData.name
-                            color: modelData.url !== "" ? FiatRatioTheme.accent : FiatRatioTheme.primaryText
                             font.pixelSize: Theme.fontSizeSmall
                             font.family: FiatRatioTheme.serif
+                            color: modelData.url !== "" ? FiatRatioTheme.accent : FiatRatioTheme.primaryText
+                            text: modelData.name
                         }
+
                         Label {
                             width: parent.width
                             wrapMode: Text.WordWrap
-                            text: modelData.what
-                            color: FiatRatioTheme.secondaryText
                             font.pixelSize: Theme.fontSizeExtraSmall
+                            color: FiatRatioTheme.secondaryText
+                            text: modelData.what
                         }
                     }
                 }
             }
 
-            Label {
+            Item { width: 1; height: Theme.paddingMedium }
+
+            // -- Version ---------------------------------------------------
+            //
+            // Last, because it is support and not identity. The number comes
+            // from the rpm spec by way of qmake, so it is the one the package
+            // was actually built with rather than one written down twice.
+
+            SectionLabel {
                 x: Theme.horizontalPageMargin
-                text: qsTr("Version %1").arg(typeof appVersion !== "undefined" ? appVersion : qsTr("unknown"))
-                color: FiatRatioTheme.secondaryText
-                font.pixelSize: Theme.fontSizeExtraSmall
+                text: qsTr("Version")
             }
 
+            Label {
+                x: Theme.horizontalPageMargin
+                width: parent.width - Theme.horizontalPageMargin * 2
+                font.pixelSize: Theme.fontSizeSmall
+                color: FiatRatioTheme.primaryText
+                text: typeof appVersion !== "undefined" ? appVersion : qsTr("unknown")
+            }
+
+            // -- Colophon --------------------------------------------------
+
             Item { width: 1; height: Theme.itemSizeExtraSmall }
+
             Rectangle {
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: Theme.itemSizeSmall
                 height: 1
                 color: FiatRatioTheme.innerBorder
             }
+
+            Item { width: 1; height: Theme.paddingLarge }
+
             MunkstolenMark {
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: Theme.itemSizeMedium
                 frame: "ring"
                 color: FiatRatioTheme.makerMark
             }
+
+            Item { width: 1; height: Theme.paddingSmall }
+
             Label {
-                anchors.horizontalCenter: parent.horizontalCenter
+                width: parent.width
+                horizontalAlignment: Text.AlignHCenter
                 text: "munkstolen"
-                color: FiatRatioTheme.makerMark
                 font.pixelSize: Theme.fontSizeSmall
                 font.family: FiatRatioTheme.serif
                 font.italic: true
+                color: FiatRatioTheme.makerMark
             }
         }
 
