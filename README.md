@@ -1,6 +1,6 @@
 # Fiat Ratio
 
-Money for Sailfish OS, the Fiat way. Built on a personal finance database kept since 2022, made into an app when the Jolla Phone arrived. A budget month that starts when the salary arrives, or on the 1st. Shared costs are entered at the full price and only your part counts. Savings, investments, a home and loans all add up to one net worth. Everything goes out to one open file, and comes back in from it.
+Money for Sailfish OS, the Fiat way. Built on a personal finance database kept since 2022, made into an app when the Jolla Phone arrived. A budget month that starts when the salary arrives, or on the 1st. Recurring costs are planned ahead and confirmed when they happen. Savings, investments, a home and loans all add up to one net worth. Everything goes out to one open file, and comes back in from it. Costs you share can be entered at the full price, with only your part counted.
 
 Part of the Fiat family. MIT licence.
 
@@ -11,8 +11,6 @@ The family's shared parts (PageHead, SectionLabel, MunkstolenMark, WordChoice, L
 ```
 tools/copy-family-parts.sh
 ```
-
-The `.pro` file refuses to build until they are in place. Run the script again whenever Lux's components change.
 
 ## What's where
 
@@ -44,11 +42,11 @@ The `.pro` file refuses to build until they are in place. Run the script again w
 - Amounts are integers in minor units, and they are *your part*. `amount_full`, `value_full` and `opening_full` hold the whole when something is shared.
 - **Merge** keeps the newer `updated_at` for each row and carries tombstones (`deleted_at`). **Replace** empties the app and loads the file as it is.
 
-`tools/fiat_bundle.py` is the specification by example. It reads and writes the same file, and also exports CSV and QIF (GnuCash, HomeBank). To bring bookkeeping in from somewhere else, write a small script that produces this file. That is how the Baserow history was moved in.
+`tools/fiat_bundle.py` is the specification by example. It reads and writes the same file, and also exports CSV and QIF (GnuCash, HomeBank). To bring bookkeeping in from somewhere else, write a small script that produces this file. That is how my Baserow history was moved in.
 
 ## Translations
 
-The language follows the phone. Settings › Language overrides it on purpose, and the change takes effect at once. All four languages are kept by the author, who speaks them. Corrections are welcome as pull requests on `translations/*.ts`, and for the standard categories on `tools/make_standard.py`. Finnish isn't shipped.
+The language follows the phone. Settings › Language overrides it on purpose, and the change takes effect at once. All four languages are kept by the author, who speaks them. Corrections are welcome as pull requests on `translations/*.ts`, and for the standard categories on `tools/make_standard.py`.
 
 After changing strings in QML:
 

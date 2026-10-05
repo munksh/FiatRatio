@@ -12,10 +12,6 @@
         <translation>Зарплата пришла в пятницу. Аренда уходит 25-го. Электричество вышло дороже, чем в прошлом месяце.</translation>
     </message>
     <message>
-        <source>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Shared costs are entered at the full price and only your part counts. Savings, a home and loans add up to one net worth.</source>
-        <translation>fiat ratio ведёт месяц от зарплаты до зарплаты: что пришло, что ушло и что ещё впереди. Общие расходы вносятся по полной цене, учитывается только ваша доля. Сбережения, жильё и кредиты складываются в одни чистые активы.</translation>
-    </message>
-    <message>
         <source>&lt;b&gt;fiat&lt;/b&gt; — Latin, &lt;i&gt;let there be&lt;/i&gt;. From &lt;i&gt;fiat lux&lt;/i&gt; in the Vulgate: let there be light, and there was light. The first app took the phrase. The rest of the family kept the verb.</source>
         <translation>&lt;b&gt;fiat&lt;/b&gt; — латынь, &lt;i&gt;да будет&lt;/i&gt;. Из &lt;i&gt;fiat lux&lt;/i&gt; в Вульгате: да будет свет, и стал свет. Первое приложение взяло всю фразу. Остальная семья оставила глагол.</translation>
     </message>
@@ -106,6 +102,10 @@
     <message>
         <source>let there be image — a photo editor</source>
         <translation>да будет образ — фоторедактор</translation>
+    </message>
+    <message>
+        <source>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Recurring costs are planned ahead, and savings, a home and loans add up to one net worth.</source>
+        <translation>fiat ratio ведёт месяц от одной зарплаты до следующей: что пришло, что ушло и что ещё предстоит. Повторяющиеся расходы планируются заранее, а накопления, жильё и кредиты складываются в один чистый капитал.</translation>
     </message>
 </context>
 <context>

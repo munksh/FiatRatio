@@ -3,8 +3,8 @@ Type=Application
 X-Nemo-Application-Type=silica-qt5
 Icon=harbour-fiatratio
 Exec=harbour-fiatratio
-Name=Fiat Ratio
-Name[sv]=Fiat Ratio
+Name=fiat ratio
+Name[sv]=fiat ratio
 Comment=Money, budget months and net worth
 Comment[sv]=Pengar, budgetmånader och nettoförmögenhet
 

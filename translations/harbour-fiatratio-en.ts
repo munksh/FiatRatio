@@ -12,10 +12,6 @@
         <translation>The salary came on Friday. The rent goes on the 25th. The electricity cost more than last month.</translation>
     </message>
     <message>
-        <source>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Shared costs are entered at the full price and only your part counts. Savings, a home and loans add up to one net worth.</source>
-        <translation>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Shared costs are entered at the full price and only your part counts. Savings, a home and loans add up to one net worth.</translation>
-    </message>
-    <message>
         <source>&lt;b&gt;fiat&lt;/b&gt; — Latin, &lt;i&gt;let there be&lt;/i&gt;. From &lt;i&gt;fiat lux&lt;/i&gt; in the Vulgate: let there be light, and there was light. The first app took the phrase. The rest of the family kept the verb.</source>
         <translation>&lt;b&gt;fiat&lt;/b&gt; — Latin, &lt;i&gt;let there be&lt;/i&gt;. From &lt;i&gt;fiat lux&lt;/i&gt; in the Vulgate: let there be light, and there was light. The first app took the phrase. The rest of the family kept the verb.</translation>
     </message>
@@ -106,6 +102,10 @@
     <message>
         <source>let there be image — a photo editor</source>
         <translation>let there be image — a photo editor</translation>
+    </message>
+    <message>
+        <source>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Recurring costs are planned ahead, and savings, a home and loans add up to one net worth.</source>
+        <translation>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Recurring costs are planned ahead, and savings, a home and loans add up to one net worth.</translation>
     </message>
 </context>
 <context>

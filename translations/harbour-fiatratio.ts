@@ -14,11 +14,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="51"/>
-        <source>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Shared costs are entered at the full price and only your part counts. Savings, a home and loans add up to one net worth.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../qml/pages/AboutPage.qml" line="61"/>
         <source>&lt;b&gt;fiat&lt;/b&gt; — Latin, &lt;i&gt;let there be&lt;/i&gt;. From &lt;i&gt;fiat lux&lt;/i&gt; in the Vulgate: let there be light, and there was light. The first app took the phrase. The rest of the family kept the verb.</source>
         <translation type="unfinished"></translation>
@@ -106,6 +101,11 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="211"/>
         <source>let there be heart — a metronome</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="51"/>
+        <source>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Recurring costs are planned ahead, and savings, a home and loans add up to one net worth.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

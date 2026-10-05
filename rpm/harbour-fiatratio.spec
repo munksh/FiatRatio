@@ -1,5 +1,5 @@
 Name:       harbour-fiatratio
-Summary:    Fiat Ratio – money from one salary to the next
+Summary:    fiat ratio – money from one salary to the next
 Version:    1.0
 Release:    1
 License:    MIT
@@ -21,7 +21,7 @@ into the months ahead. Savings, a home and loans in one net worth, and
 everything in one open file you can take anywhere.
 
 %if 0%{?_chum}
-Title: Fiat Ratio
+Title: fiat ratio
 Type: desktop-application
 DeveloperName: Munkstolen
 Categories:

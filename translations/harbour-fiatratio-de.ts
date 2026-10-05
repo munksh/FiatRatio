@@ -12,10 +12,6 @@
         <translation>Das Gehalt kam am Freitag. Die Miete geht am 25. raus. Der Strom war teurer als letzten Monat.</translation>
     </message>
     <message>
-        <source>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Shared costs are entered at the full price and only your part counts. Savings, a home and loans add up to one net worth.</source>
-        <translation>fiat ratio führt den Monat von einem Gehalt zum nächsten: was hereinkam, was hinausging und was noch kommt. Geteilte Kosten werden zum vollen Preis eingetragen, gezählt wird nur dein Anteil. Ersparnisse, eine Wohnung und Kredite ergeben zusammen ein Vermögen.</translation>
-    </message>
-    <message>
         <source>&lt;b&gt;fiat&lt;/b&gt; — Latin, &lt;i&gt;let there be&lt;/i&gt;. From &lt;i&gt;fiat lux&lt;/i&gt; in the Vulgate: let there be light, and there was light. The first app took the phrase. The rest of the family kept the verb.</source>
         <translation>&lt;b&gt;fiat&lt;/b&gt; — Latein, &lt;i&gt;es werde&lt;/i&gt;. Aus &lt;i&gt;fiat lux&lt;/i&gt; in der Vulgata: Es werde Licht, und es ward Licht. Die erste App nahm den ganzen Satz. Der Rest der Familie behielt das Verb.</translation>
     </message>
@@ -106,6 +102,10 @@
     <message>
         <source>let there be image — a photo editor</source>
         <translation>es werde Bild — eine Bildbearbeitung</translation>
+    </message>
+    <message>
+        <source>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Recurring costs are planned ahead, and savings, a home and loans add up to one net worth.</source>
+        <translation>fiat ratio behält den Monat von einem Gehalt zum nächsten im Blick: was hereinkam, was hinausging und was noch kommt. Wiederkehrende Kosten werden vorausgeplant, und Erspartes, ein Zuhause und Kredite ergeben zusammen ein Nettovermögen.</translation>
     </message>
 </context>
 <context>
