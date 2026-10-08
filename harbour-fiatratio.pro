@@ -70,7 +70,7 @@ DISTFILES += \
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
 licensefile.files = $$PWD/LICENSE
-licensefile.path = /usr/share/licenses/$${TARGET}
+licensefile.path = /usr/share/$${TARGET}
 INSTALLS += licensefile
 
 # All four languages are kept by the author. harbour-fiatratio-en.ts exists so

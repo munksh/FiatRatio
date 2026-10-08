@@ -64,7 +64,6 @@ desktop-file-install --delete-original \
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
-%license %{_datadir}/licenses/%{name}/LICENSE
 
 %changelog
 * Mon Oct 05 2026 Caesar Prometheus Ivarsson <caesar@munkstolen.se> - 1.1-1
