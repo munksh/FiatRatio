@@ -88,10 +88,6 @@
         <translation>let there be reckoning — this one</translation>
     </message>
     <message>
-        <source>Version %1</source>
-        <translation>Version %1</translation>
-    </message>
-    <message>
         <source>unknown</source>
         <translation>unknown</translation>
     </message>
@@ -100,12 +96,16 @@
         <translation>let there be light — a light meter for film</translation>
     </message>
     <message>
-        <source>let there be image — a photo editor</source>
-        <translation>let there be image — a photo editor</translation>
-    </message>
-    <message>
         <source>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Recurring costs are planned ahead, and savings, a home and loans add up to one net worth.</source>
         <translation>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Recurring costs are planned ahead, and savings, a home and loans add up to one net worth.</translation>
+    </message>
+    <message>
+        <source>let there be image — a raw editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -381,8 +381,8 @@
         <translation>A later day: stays planned until you confirm it.</translation>
     </message>
     <message>
-        <source>The salary starts a new month.</source>
-        <translation>The salary starts a new month.</translation>
+        <source>The salary starts a new month: %1.</source>
+        <translation>The salary starts a new month: %1.</translation>
     </message>
     <message>
         <source>Method</source>

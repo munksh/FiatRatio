@@ -81,6 +81,7 @@ public:
     Q_INVOKABLE void endScheduleAfter(int id, const QString &isoDate);
     Q_INVOKABLE void deleteSchedule(int id);
     Q_INVOKABLE int autoPlan();
+    Q_INVOKABLE QString salaryMonth(const QString &isoDate);
 
     // ---- categories and lists
     Q_INVOKABLE QVariantList buckets();
@@ -142,6 +143,10 @@ private:
     QDate predictedStart(const QString &periodId);
     QString ensurePeriod(const QString &periodId, const QDate &start = QDate());
     QString openSalaryPeriod(const QDate &date, int anchorTxn);
+    void releaseSalaryPeriod(const QString &periodId);
+    void moveAcross(const QString &periodId, const QDate &start);
+    void applySalary(int txnId);
+    void realignMonths();
     int potId();
     int keyedCategory(const QString &key);
     int insertTxn(const QVariantMap &t, int scheduleId);

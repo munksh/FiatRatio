@@ -357,7 +357,7 @@ Dialog {
                 width: parent.width - 2 * Theme.horizontalPageMargin
                 visible: dialog.isSalary && dialog.salaryMode
                 wrapMode: Text.WordWrap
-                text: qsTr("The salary starts a new month.")
+                text: qsTr("The salary starts a new month: %1.").arg(F.monthTitle(appLanguage, store.salaryMonth(dialog.date)))
                 color: FiatRatioTheme.secondaryText
                 font.pixelSize: Theme.fontSizeExtraSmall
             }

@@ -88,10 +88,6 @@
         <translation>es werde Rechnung — diese hier</translation>
     </message>
     <message>
-        <source>Version %1</source>
-        <translation>Version %1</translation>
-    </message>
-    <message>
         <source>unknown</source>
         <translation>unbekannt</translation>
     </message>
@@ -100,12 +96,16 @@
         <translation>es werde Licht — ein Belichtungsmesser für Film</translation>
     </message>
     <message>
-        <source>let there be image — a photo editor</source>
-        <translation>es werde Bild — eine Bildbearbeitung</translation>
-    </message>
-    <message>
         <source>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Recurring costs are planned ahead, and savings, a home and loans add up to one net worth.</source>
         <translation>fiat ratio behält den Monat von einem Gehalt zum nächsten im Blick: was hereinkam, was hinausging und was noch kommt. Wiederkehrende Kosten werden vorausgeplant, und Erspartes, ein Zuhause und Kredite ergeben zusammen ein Nettovermögen.</translation>
+    </message>
+    <message>
+        <source>let there be image — a raw editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -381,8 +381,8 @@
         <translation>Ein späterer Tag: bleibt geplant, bis du bestätigst.</translation>
     </message>
     <message>
-        <source>The salary starts a new month.</source>
-        <translation>Das Gehalt beginnt einen neuen Monat.</translation>
+        <source>The salary starts a new month: %1.</source>
+        <translation>Das Gehalt beginnt einen neuen Monat: %1.</translation>
     </message>
     <message>
         <source>Method</source>

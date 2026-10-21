@@ -95,8 +95,10 @@ bool Store::open()
     // A practice run that was never finished is thrown away at the next start.
     QFile::remove(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/" + DEMO_DB);
     const bool ok = openFile(REAL_DB);
-    if (ok && isSetUp())
+    if (ok && isSetUp()) {
+        realignMonths();
         autoPlan();
+    }
     return ok;
 }
 
@@ -596,19 +598,95 @@ QString Store::currentPeriod()
     return periodFor(today());
 }
 
+// The month a salary on this day starts: the salary comes near the end of the
+// month before, so a fortnight on lands in the month it pays for. Early or late
+// by up to two weeks, it still starts the right one.
+QString Store::salaryMonth(const QString &isoDate)
+{
+    return QDate::fromString(isoDate, Qt::ISODate).addDays(15).toString("yyyy-MM");
+}
+
+// Rows near a month's first day follow it when it moves: from the start on they
+// belong to that month, before it to the month before. Only rows the app made;
+// imported ones keep the month they came with.
+void Store::moveAcross(const QString &periodId, const QDate &start)
+{
+    const QString prev = shiftPeriod(periodId, -1);
+    exec("UPDATE txn SET period_id = ?, updated_at = ? WHERE period_id = ? AND date >= ? AND deleted_at IS NULL "
+         "AND origin IN ('manual', 'schedule')", {periodId, nowIso(), prev, iso(start)});
+    exec("UPDATE txn SET period_id = ?, updated_at = ? WHERE period_id = ? AND date < ? AND deleted_at IS NULL "
+         "AND origin IN ('manual', 'schedule')", {prev, nowIso(), periodId, iso(start)});
+}
+
 QString Store::openSalaryPeriod(const QDate &date, int anchorTxn)
 {
-    const QString id = date.addDays(15).toString("yyyy-MM");
-    const QString prev = shiftPeriod(id, -1);
+    const QString id = salaryMonth(iso(date));
     if (scalar("SELECT id FROM period WHERE id = ?", {id}).isValid())
         exec("UPDATE period SET start_date = ?, anchor_txn_id = ?, updated_at = ? WHERE id = ?", {iso(date), anchorTxn, nowIso(), id});
     else
         exec("INSERT INTO period (id, start_date, anchor_txn_id, closed, updated_at) VALUES (?, ?, ?, 0, ?)",
              {id, iso(date), anchorTxn, nowIso()});
-    // Rows dated from the salary on belong to the new month, planned ones included.
-    exec("UPDATE txn SET period_id = ?, updated_at = ? WHERE period_id = ? AND date >= ? AND deleted_at IS NULL "
-         "AND origin IN ('manual', 'schedule')", {id, nowIso(), prev, iso(date)});
+    moveAcross(id, date);
     return id;
+}
+
+// A row that no longer starts its month: the month goes back to the guessed start.
+void Store::releaseSalaryPeriod(const QString &periodId)
+{
+    const QDate start = predictedStart(periodId);
+    exec("UPDATE period SET start_date = ?, anchor_txn_id = NULL, updated_at = ? WHERE id = ?", {iso(start), nowIso(), periodId});
+    moveAcross(periodId, start);
+}
+
+// The salary starts a month however it got in: added, confirmed, ticked off or
+// edited. A planned salary only counts by its date until it has come.
+void Store::applySalary(int txnId)
+{
+    const QVariantList r = rows("SELECT t.date, t.status, t.amount, t.is_salary, t.deleted_at, a.kind, c.key FROM txn t "
+                                "JOIN account a ON a.id = t.account_id LEFT JOIN category c ON c.id = t.category_id "
+                                "WHERE t.id = ?", {txnId});
+    if (r.isEmpty())
+        return;
+    const QVariantMap t = r.first().toMap();
+    const bool salary = setting("period_mode") == "salary" && t.value("kind").toString() == "pot"
+            && t.value("key").toString() == "salary" && t.value("amount").toLongLong() > 0 && t.value("deleted_at").isNull();
+    const QString anchored = scalar("SELECT id FROM period WHERE anchor_txn_id = ?", {txnId}).toString();
+    if (t.value("is_salary").toInt() != (salary ? 1 : 0))
+        exec("UPDATE txn SET is_salary = ? WHERE id = ?", {salary ? 1 : 0, txnId});
+    const bool starts = salary && t.value("status").toString() == "cleared";
+    const QString date = t.value("date").toString();
+    if (!anchored.isEmpty() && (!starts || anchored != salaryMonth(date)))
+        releaseSalaryPeriod(anchored);
+    if (starts)
+        exec("UPDATE txn SET period_id = ? WHERE id = ?", {openSalaryPeriod(fromIso(date), txnId), txnId});
+    else if (!anchored.isEmpty())
+        exec("UPDATE txn SET period_id = ? WHERE id = ?", {periodFor(date), txnId});
+}
+
+// Months ahead that no salary has started yet follow the payday rule as it is
+// now, weekends included; older imports could leave them on a fixed day. A recent
+// salary that never started its month (entered before this was handled) does.
+void Store::realignMonths()
+{
+    if (setting("period_mode") != "salary")
+        return;
+    m_db.transaction();
+    for (const QVariant &v : rows("SELECT id, start_date FROM period WHERE anchor_txn_id IS NULL AND start_date > ? ORDER BY id",
+                                  {today()})) {
+        const QVariantMap p = v.toMap();
+        const QDate start = predictedStart(p.value("id").toString());
+        if (iso(start) == p.value("start_date").toString())
+            continue;
+        exec("UPDATE period SET start_date = ?, updated_at = ? WHERE id = ?", {iso(start), nowIso(), p.value("id")});
+        moveAcross(p.value("id").toString(), start);
+    }
+    for (const QVariant &v : rows("SELECT t.id FROM txn t JOIN account a ON a.id = t.account_id JOIN category c ON c.id = t.category_id "
+                                  "WHERE a.kind = 'pot' AND c.key = 'salary' AND t.amount > 0 AND t.status = 'cleared' "
+                                  "AND t.deleted_at IS NULL AND t.parent_id IS NULL AND t.origin IN ('manual', 'schedule') AND t.date >= ? "
+                                  "AND NOT EXISTS (SELECT 1 FROM period p WHERE p.anchor_txn_id = t.id) ORDER BY t.date",
+                                  {iso(QDate::currentDate().addDays(-35))}))
+        applySalary(v.toMap().value("id").toInt());
+    m_db.commit();
 }
 
 QVariantMap Store::periodInfo(const QString &periodId)
@@ -813,11 +891,10 @@ int Store::insertTxn(const QVariantMap &t, int scheduleId)
             rec.insert(col, v);
         }
     }
-    const bool salary = t.value("isSalary").toBool() && type == "income" && setting("period_mode") == "salary";
-    rec.insert("is_salary", salary ? 1 : 0);
+    rec.insert("is_salary", 0);
     const int id = insert("txn", rec);
-    if (id > 0 && salary && status == "cleared")
-        exec("UPDATE txn SET period_id = ? WHERE id = ?", {openSalaryPeriod(QDate::fromString(date, Qt::ISODate), id), id});
+    if (id > 0 && type == "income")
+        applySalary(id);
     return id;
 }
 
@@ -964,6 +1041,7 @@ bool Store::updateTransaction(int txnId, const QVariantMap &t)
           date, periodFor(date), t.value("description").toString().trimmed(), idOrNull("categoryId"), idOrNull("methodId"),
           idOrNull("contextId"), idOrNull("personId"),
           t.value("notes").toString().isEmpty() ? QVariant() : t.value("notes"), nowIso(), txnId});
+    applySalary(txnId);
     m_db.commit();
     touch();
     return true;
@@ -1006,6 +1084,8 @@ void Store::confirmPlanned(int txnId, const QVariantMap &c)
                      {-s * mine, full > mine ? QVariant(-s * full) : QVariant(), nowIso(), p.value("transfer_peer_id")});
         }
     }
+    if (peer.isNull())
+        applySalary(txnId);
     m_db.commit();
     touch();
 }
@@ -1014,6 +1094,7 @@ void Store::setCleared(int txnId, bool cleared)
 {
     exec("UPDATE txn SET status = ?, updated_at = ? WHERE id = ? OR transfer_peer_id = ?",
          {cleared ? "cleared" : "planned", nowIso(), txnId, txnId});
+    applySalary(txnId);
     touch();
 }
 
@@ -2084,8 +2165,10 @@ QVariantMap Store::importBundle(const QString &path, const QString &mode)
         return result;
     }
     result = Bundle::importBundle(m_db, doc.object(), mode);
-    if (!result.contains("error"))
+    if (!result.contains("error")) {
+        realignMonths();
         autoPlan();
+    }
     touch();
     return result;
 }

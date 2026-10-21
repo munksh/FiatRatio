@@ -1,6 +1,6 @@
 Name:       harbour-fiatratio
 Summary:    fiat ratio – money from one salary to the next
-Version:    1.1
+Version:    1.2
 Release:    1
 License:    MIT
 URL:        https://github.com/munksh/FiatRatio
@@ -68,6 +68,11 @@ desktop-file-install --delete-original \
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 
 %changelog
+* Wed Oct 21 2026 Caesar Prometheus Ivarsson <caesar@munkstolen.se> - 1.2-1
+- The salary starts the right month however it is entered: added ahead,
+  confirmed, ticked off or edited. Months ahead follow the payday rule,
+  weekends included, so rows near payday land in the right month.
+
 * Mon Oct 05 2026 Caesar Prometheus Ivarsson <caesar@munkstolen.se> - 1.1-1
 - The About page lists the whole fiat family with full-size icons, and the
   package carries metadata for SailfishOS:Chum: title, icon and screenshots.

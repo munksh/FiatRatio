@@ -59,47 +59,47 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="201"/>
+        <location filename="../qml/pages/AboutPage.qml" line="205"/>
         <source>The fiat family</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="205"/>
+        <location filename="../qml/pages/AboutPage.qml" line="210"/>
         <source>let there be doing — a task list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="206"/>
+        <location filename="../qml/pages/AboutPage.qml" line="211"/>
         <source>let there be edge — keeps edges</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="207"/>
+        <location filename="../qml/pages/AboutPage.qml" line="212"/>
         <source>let there be tongue — a translator</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="208"/>
+        <location filename="../qml/pages/AboutPage.qml" line="213"/>
         <source>let there be voice — a chromatic tuner</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="209"/>
+        <location filename="../qml/pages/AboutPage.qml" line="214"/>
         <source>let there be bridge — a native Qobuz client</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="210"/>
+        <location filename="../qml/pages/AboutPage.qml" line="215"/>
         <source>let there be light — a light meter for film</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="214"/>
-        <source>let there be image — a photo editor</source>
+        <location filename="../qml/pages/AboutPage.qml" line="282"/>
+        <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="211"/>
+        <location filename="../qml/pages/AboutPage.qml" line="216"/>
         <source>let there be heart — a metronome</source>
         <translation type="unfinished"></translation>
     </message>
@@ -109,27 +109,27 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="212"/>
+        <location filename="../qml/pages/AboutPage.qml" line="217"/>
         <source>let there be step — a step counter - Coming soon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="213"/>
+        <location filename="../qml/pages/AboutPage.qml" line="218"/>
         <source>let there be habit — a habit tracker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="215"/>
+        <location filename="../qml/pages/AboutPage.qml" line="219"/>
+        <source>let there be image — a raw editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="220"/>
         <source>let there be reckoning — this one</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="262"/>
-        <source>Version %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="262"/>
+        <location filename="../qml/pages/AboutPage.qml" line="290"/>
         <source>unknown</source>
         <translation type="unfinished"></translation>
     </message>
@@ -307,11 +307,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AddDialog.qml" line="360"/>
-        <source>The salary starts a new month.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../qml/pages/AddDialog.qml" line="423"/>
         <source>Method</source>
         <translation type="unfinished"></translation>
@@ -456,6 +451,11 @@
     <message>
         <location filename="../qml/pages/AddDialog.qml" line="334"/>
         <source>yesterday</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddDialog.qml" line="360"/>
+        <source>The salary starts a new month: %1.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1237,121 +1237,121 @@
 <context>
     <name>Demo</name>
     <message>
-        <location filename="../src/store.cpp" line="432"/>
+        <location filename="../src/store.cpp" line="434"/>
         <source>Card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="432"/>
+        <location filename="../src/store.cpp" line="434"/>
         <source>Swish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="432"/>
+        <location filename="../src/store.cpp" line="434"/>
         <source>Cash</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="439"/>
+        <location filename="../src/store.cpp" line="441"/>
         <source>Buffer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="441"/>
+        <location filename="../src/store.cpp" line="443"/>
         <source>Funds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="443"/>
+        <location filename="../src/store.cpp" line="445"/>
         <source>Home</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="445"/>
+        <location filename="../src/store.cpp" line="447"/>
         <source>Mortgage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="447"/>
+        <location filename="../src/store.cpp" line="449"/>
         <source>Student loan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/store.cpp" line="454"/>
-        <location filename="../src/store.cpp" line="485"/>
-        <source>Rent</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/store.cpp" line="455"/>
-        <location filename="../src/store.cpp" line="486"/>
-        <source>Electricity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/store.cpp" line="456"/>
         <location filename="../src/store.cpp" line="487"/>
-        <source>Broadband</source>
+        <source>Rent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/store.cpp" line="457"/>
         <location filename="../src/store.cpp" line="488"/>
-        <source>Mobile</source>
+        <source>Electricity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/store.cpp" line="458"/>
         <location filename="../src/store.cpp" line="489"/>
-        <source>Gym</source>
+        <source>Broadband</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/store.cpp" line="459"/>
-        <source>Car insurance</source>
+        <location filename="../src/store.cpp" line="490"/>
+        <source>Mobile</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/store.cpp" line="460"/>
+        <location filename="../src/store.cpp" line="491"/>
+        <source>Gym</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/store.cpp" line="461"/>
+        <source>Car insurance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/store.cpp" line="462"/>
         <source>Home insurance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="473"/>
-        <location filename="../src/store.cpp" line="494"/>
+        <location filename="../src/store.cpp" line="475"/>
+        <location filename="../src/store.cpp" line="496"/>
         <source>To the buffer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="484"/>
-        <location filename="../src/store.cpp" line="510"/>
+        <location filename="../src/store.cpp" line="486"/>
+        <location filename="../src/store.cpp" line="512"/>
         <source>Salary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="490"/>
-        <location filename="../src/store.cpp" line="491"/>
-        <location filename="../src/store.cpp" line="523"/>
+        <location filename="../src/store.cpp" line="492"/>
+        <location filename="../src/store.cpp" line="493"/>
+        <location filename="../src/store.cpp" line="525"/>
         <source>Grocery shop</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="492"/>
+        <location filename="../src/store.cpp" line="494"/>
         <source>Restaurant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="493"/>
+        <location filename="../src/store.cpp" line="495"/>
         <source>Clothes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="526"/>
+        <location filename="../src/store.cpp" line="528"/>
         <source>Dinner</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="529"/>
+        <location filename="../src/store.cpp" line="531"/>
         <source>Coffee</source>
         <translation type="unfinished"></translation>
     </message>

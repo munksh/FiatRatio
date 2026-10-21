@@ -88,10 +88,6 @@
         <translation>varde räkning — den här</translation>
     </message>
     <message>
-        <source>Version %1</source>
-        <translation>Version %1</translation>
-    </message>
-    <message>
         <source>unknown</source>
         <translation>okänd</translation>
     </message>
@@ -100,12 +96,16 @@
         <translation>varde ljus — en ljusmätare för film</translation>
     </message>
     <message>
-        <source>let there be image — a photo editor</source>
-        <translation>varde bild — en bildredigerare</translation>
-    </message>
-    <message>
         <source>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Recurring costs are planned ahead, and savings, a home and loans add up to one net worth.</source>
         <translation>fiat ratio håller koll på månaden från en lön till nästa: vad som kom in, vad som gick ut och vad som återstår. Återkommande kostnader planeras i förväg, och sparande, en bostad och lån blir tillsammans en nettoförmögenhet.</translation>
+    </message>
+    <message>
+        <source>let there be image — a raw editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -381,8 +381,8 @@
         <translation>Senare dag: förblir planerad tills du bekräftar.</translation>
     </message>
     <message>
-        <source>The salary starts a new month.</source>
-        <translation>Lönen startar en ny månad.</translation>
+        <source>The salary starts a new month: %1.</source>
+        <translation>Lönen startar en ny månad: %1.</translation>
     </message>
     <message>
         <source>Method</source>

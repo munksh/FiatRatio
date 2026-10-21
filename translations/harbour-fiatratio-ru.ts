@@ -88,10 +88,6 @@
         <translation>да будет счёт — это она</translation>
     </message>
     <message>
-        <source>Version %1</source>
-        <translation>Версия %1</translation>
-    </message>
-    <message>
         <source>unknown</source>
         <translation>неизвестно</translation>
     </message>
@@ -100,12 +96,16 @@
         <translation>да будет свет — экспонометр для плёнки</translation>
     </message>
     <message>
-        <source>let there be image — a photo editor</source>
-        <translation>да будет образ — фоторедактор</translation>
-    </message>
-    <message>
         <source>fiat ratio keeps the month from one salary to the next: what came in, what went out, and what is still to come. Recurring costs are planned ahead, and savings, a home and loans add up to one net worth.</source>
         <translation>fiat ratio ведёт месяц от одной зарплаты до следующей: что пришло, что ушло и что ещё предстоит. Повторяющиеся расходы планируются заранее, а накопления, жильё и кредиты складываются в один чистый капитал.</translation>
+    </message>
+    <message>
+        <source>let there be image — a raw editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -381,8 +381,8 @@
         <translation>Более поздний день: остаётся запланированным, пока не подтвердите.</translation>
     </message>
     <message>
-        <source>The salary starts a new month.</source>
-        <translation>Зарплата начинает новый месяц.</translation>
+        <source>The salary starts a new month: %1.</source>
+        <translation>Зарплата начинает новый месяц: %1.</translation>
     </message>
     <message>
         <source>Method</source>
