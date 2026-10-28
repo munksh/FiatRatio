@@ -719,6 +719,26 @@
         <source>Difference: %1. Saved as a balance correction. It does not count as income or saving.</source>
         <translation>Skillnad: %1. Sparas som en saldokorrigering. Räknas inte som inkomst eller sparande.</translation>
     </message>
+    <message>
+        <source>Worth today</source>
+        <translation>Värde idag</translation>
+    </message>
+    <message>
+        <source>they owe me</source>
+        <translation>de är skyldiga mig</translation>
+    </message>
+    <message>
+        <source>I owe them</source>
+        <translation>jag är skyldig dem</translation>
+    </message>
+    <message>
+        <source>Write what it is worth today.</source>
+        <translation>Skriv vad det är värt idag.</translation>
+    </message>
+    <message>
+        <source>Difference: %1. Saved as today&apos;s value.</source>
+        <translation>Skillnad: %1. Sparas som dagens värde.</translation>
+    </message>
 </context>
 <context>
     <name>BreakdownPage</name>
@@ -989,91 +1009,95 @@
     <name>Demo</name>
     <message>
         <source>Card</source>
-        <translation type="unfinished"></translation>
+        <translation>Kort</translation>
     </message>
     <message>
         <source>Swish</source>
-        <translation type="unfinished"></translation>
+        <translation>Swish</translation>
+    </message>
+    <message>
+        <source>Transfer</source>
+        <translation>Överföring</translation>
     </message>
     <message>
         <source>Cash</source>
-        <translation type="unfinished"></translation>
+        <translation>Kontanter</translation>
     </message>
     <message>
         <source>Buffer</source>
-        <translation type="unfinished"></translation>
+        <translation>Buffert</translation>
     </message>
     <message>
         <source>Funds</source>
-        <translation type="unfinished"></translation>
+        <translation>Fonder</translation>
     </message>
     <message>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Bostad</translation>
     </message>
     <message>
         <source>Mortgage</source>
-        <translation type="unfinished"></translation>
+        <translation>Bolån</translation>
     </message>
     <message>
         <source>Student loan</source>
-        <translation type="unfinished"></translation>
+        <translation>Studielån</translation>
     </message>
     <message>
         <source>Rent</source>
-        <translation type="unfinished"></translation>
+        <translation>Hyra</translation>
     </message>
     <message>
         <source>Electricity</source>
-        <translation type="unfinished"></translation>
+        <translation>El</translation>
     </message>
     <message>
         <source>Broadband</source>
-        <translation type="unfinished"></translation>
+        <translation>Bredband</translation>
     </message>
     <message>
         <source>Mobile</source>
-        <translation type="unfinished"></translation>
+        <translation>Mobil</translation>
     </message>
     <message>
         <source>Gym</source>
-        <translation type="unfinished"></translation>
+        <translation>Gym</translation>
     </message>
     <message>
         <source>Car insurance</source>
-        <translation type="unfinished"></translation>
+        <translation>Bilförsäkring</translation>
     </message>
     <message>
         <source>Home insurance</source>
-        <translation type="unfinished"></translation>
+        <translation>Hemförsäkring</translation>
     </message>
     <message>
         <source>To the buffer</source>
-        <translation type="unfinished"></translation>
+        <translation>Till bufferten</translation>
     </message>
     <message>
         <source>Salary</source>
-        <translation type="unfinished"></translation>
+        <translation>Lön</translation>
     </message>
     <message>
         <source>Grocery shop</source>
-        <translation type="unfinished"></translation>
+        <translation>Matinköp</translation>
     </message>
     <message>
         <source>Restaurant</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurang</translation>
     </message>
     <message>
         <source>Clothes</source>
-        <translation type="unfinished"></translation>
+        <translation>Kläder</translation>
     </message>
     <message>
         <source>Dinner</source>
-        <translation type="unfinished"></translation>
+        <translation>Middag</translation>
     </message>
     <message>
         <source>Coffee</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaffe</translation>
     </message>
 </context>
 <context>

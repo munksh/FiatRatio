@@ -719,6 +719,26 @@
         <source>Difference: %1. Saved as a balance correction. It does not count as income or saving.</source>
         <translation>Разница: %1. Сохраняется как корректировка баланса. Не считается доходом или накоплением.</translation>
     </message>
+    <message>
+        <source>Worth today</source>
+        <translation>Стоимость сегодня</translation>
+    </message>
+    <message>
+        <source>they owe me</source>
+        <translation>мне должны</translation>
+    </message>
+    <message>
+        <source>I owe them</source>
+        <translation>я должен</translation>
+    </message>
+    <message>
+        <source>Write what it is worth today.</source>
+        <translation>Введите, сколько это стоит сегодня.</translation>
+    </message>
+    <message>
+        <source>Difference: %1. Saved as today&apos;s value.</source>
+        <translation>Разница: %1. Сохраняется как сегодняшняя стоимость.</translation>
+    </message>
 </context>
 <context>
     <name>BreakdownPage</name>
@@ -989,91 +1009,95 @@
     <name>Demo</name>
     <message>
         <source>Card</source>
-        <translation type="unfinished"></translation>
+        <translation>Карта</translation>
     </message>
     <message>
         <source>Swish</source>
-        <translation type="unfinished"></translation>
+        <translation>Swish</translation>
+    </message>
+    <message>
+        <source>Transfer</source>
+        <translation>Перевод</translation>
     </message>
     <message>
         <source>Cash</source>
-        <translation type="unfinished"></translation>
+        <translation>Наличные</translation>
     </message>
     <message>
         <source>Buffer</source>
-        <translation type="unfinished"></translation>
+        <translation>Подушка</translation>
     </message>
     <message>
         <source>Funds</source>
-        <translation type="unfinished"></translation>
+        <translation>Фонды</translation>
     </message>
     <message>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Квартира</translation>
     </message>
     <message>
         <source>Mortgage</source>
-        <translation type="unfinished"></translation>
+        <translation>Ипотека</translation>
     </message>
     <message>
         <source>Student loan</source>
-        <translation type="unfinished"></translation>
+        <translation>Студенческий кредит</translation>
     </message>
     <message>
         <source>Rent</source>
-        <translation type="unfinished"></translation>
+        <translation>Аренда</translation>
     </message>
     <message>
         <source>Electricity</source>
-        <translation type="unfinished"></translation>
+        <translation>Электричество</translation>
     </message>
     <message>
         <source>Broadband</source>
-        <translation type="unfinished"></translation>
+        <translation>Интернет</translation>
     </message>
     <message>
         <source>Mobile</source>
-        <translation type="unfinished"></translation>
+        <translation>Мобильная связь</translation>
     </message>
     <message>
         <source>Gym</source>
-        <translation type="unfinished"></translation>
+        <translation>Спортзал</translation>
     </message>
     <message>
         <source>Car insurance</source>
-        <translation type="unfinished"></translation>
+        <translation>Автостраховка</translation>
     </message>
     <message>
         <source>Home insurance</source>
-        <translation type="unfinished"></translation>
+        <translation>Страховка жилья</translation>
     </message>
     <message>
         <source>To the buffer</source>
-        <translation type="unfinished"></translation>
+        <translation>В подушку</translation>
     </message>
     <message>
         <source>Salary</source>
-        <translation type="unfinished"></translation>
+        <translation>Зарплата</translation>
     </message>
     <message>
         <source>Grocery shop</source>
-        <translation type="unfinished"></translation>
+        <translation>Продукты</translation>
     </message>
     <message>
         <source>Restaurant</source>
-        <translation type="unfinished"></translation>
+        <translation>Ресторан</translation>
     </message>
     <message>
         <source>Clothes</source>
-        <translation type="unfinished"></translation>
+        <translation>Одежда</translation>
     </message>
     <message>
         <source>Dinner</source>
-        <translation type="unfinished"></translation>
+        <translation>Ужин</translation>
     </message>
     <message>
         <source>Coffee</source>
-        <translation type="unfinished"></translation>
+        <translation>Кофе</translation>
     </message>
 </context>
 <context>

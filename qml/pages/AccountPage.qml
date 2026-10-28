@@ -11,6 +11,9 @@ Page {
     readonly property var acc: { store.revision; return store.account(accountId) }
     readonly property var moves: { store.revision; return store.accountTransactions(accountId, 30) }
     readonly property bool shared: Number(acc.my_share) > 0 && Number(acc.my_share) < 1
+    // What the account shows comes from values set by hand or from its rows. A
+    // savings account brought in with a value history is the former, like a fund.
+    readonly property bool byValue: acc.balance_source === "valuation"
 
     function paint() { FiatRatioTheme.applyPalette(page) }
     Component.onCompleted: paint()
@@ -68,7 +71,7 @@ Page {
 
             LinkText {
                 x: Theme.horizontalPageMargin - Theme.paddingSmall
-                visible: kinds.valued(page.acc.kind)
+                visible: page.byValue
                 text: qsTr("a new value")
                 onClicked: pageStack.push(Qt.resolvedUrl("ValueDialog.qml"), {
                     "accountId": page.accountId, "accountName": page.acc.name,
@@ -92,12 +95,12 @@ Page {
             }
             LinkText {
                 x: Theme.horizontalPageMargin - Theme.paddingSmall
-                visible: !kinds.valued(page.acc.kind) && page.acc.kind !== "person"
                 text: qsTr("correct the balance")
                 onClicked: pageStack.push(Qt.resolvedUrl("BalanceDialog.qml"), {
                     "accountId": page.accountId, "accountName": page.acc.name,
                     "share": page.acc.my_share, "currency": page.acc.currency,
-                    "current": Number(page.acc.value), "debt": kinds.debt(page.acc.kind) })
+                    "current": Number(page.acc.value), "debt": kinds.debt(page.acc.kind),
+                    "person": page.acc.kind === "person", "byValue": page.byValue })
             }
             LinkText {
                 x: Theme.horizontalPageMargin - Theme.paddingSmall

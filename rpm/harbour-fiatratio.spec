@@ -1,6 +1,6 @@
 Name:       harbour-fiatratio
 Summary:    fiat ratio – money from one salary to the next
-Version:    1.2
+Version:    1.3
 Release:    1
 License:    MIT
 URL:        https://github.com/munksh/FiatRatio
@@ -68,6 +68,14 @@ desktop-file-install --delete-original \
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 
 %changelog
+* Wed Oct 28 2026 Caesar Prometheus Ivarsson <caesar@munkstolen.se> - 1.3-1
+- Every account can have its balance corrected, people and valued accounts
+  included.
+- A recurring cost confirmed on another day than planned no longer comes
+  back as planned.
+- The practice run uses your currency, with amounts that make sense in it,
+  and its names are translated.
+
 * Wed Oct 21 2026 Caesar Prometheus Ivarsson <caesar@munkstolen.se> - 1.2-1
 - The salary starts the right month however it is entered: added ahead,
   confirmed, ticked off or edited. Months ahead follow the payday rule,

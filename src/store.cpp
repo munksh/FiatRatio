@@ -401,10 +401,12 @@ void Store::setCoachStep(int step)
 void Store::startDemo()
 {
     const QString dir = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+    // The practice run speaks the user's money: the currency already chosen, or the phone's.
+    const QString currency = isSetUp() ? setting("base_currency", localeCurrency()) : localeCurrency();
     m_db.close();
     QFile::remove(dir + "/" + DEMO_DB);
     openFile(DEMO_DB);
-    seedDemo();
+    seedDemo(currency);
     m_demo = true;
     m_coach = 0;
     emit demoChanged();
@@ -423,43 +425,49 @@ void Store::endDemo()
     touch();
 }
 
-void Store::seedDemo()
+void Store::seedDemo(const QString &currency)
 {
     auto T = [](const char *s) { return QCoreApplication::translate("Demo", s); };
+    // The amounts are written in kronor. Other currencies get the same life at
+    // their own size, rounded to whole units.
+    const double size = QStringList{"EUR", "USD", "GBP", "CHF"}.contains(currency) ? 0.1 : currency == "RUB" ? 5.0 : 1.0;
+    auto M = [size](qlonglong minor) { return qRound64(minor * size / 100.0) * 100; };
     QVariantMap setup;
-    setup.insert("base_currency", localeCurrency());
+    setup.insert("base_currency", currency);
     setup.insert("period_mode", "salary");
     setup.insert("payday_day", "25");
     setup.insert("standard_categories", true);
-    setup.insert("methods", QVariantList{QCoreApplication::translate("Demo", "Card"), QCoreApplication::translate("Demo", "Swish"), QCoreApplication::translate("Demo", "Cash")});
+    setup.insert("methods", QVariantList{QCoreApplication::translate("Demo", "Card"),
+                                         currency == "SEK" ? QCoreApplication::translate("Demo", "Swish") : QCoreApplication::translate("Demo", "Transfer"),
+                                         QCoreApplication::translate("Demo", "Cash")});
     setupFresh(setup);
 
     const int alex = addListItem("person", "Alex");
     addListItem("person", "Kim");
 
     QVariantMap a;
-    a = {{"name", QCoreApplication::translate("Demo", "Buffer")}, {"kind", "savings"}, {"openingWhole", 1840000}};
+    a = {{"name", QCoreApplication::translate("Demo", "Buffer")}, {"kind", "savings"}, {"openingWhole", M(1840000)}};
     const int buffer = addAccount(a);
-    a = {{"name", QCoreApplication::translate("Demo", "Funds")}, {"kind", "investment"}, {"openingWhole", 4230000}};
+    a = {{"name", QCoreApplication::translate("Demo", "Funds")}, {"kind", "investment"}, {"openingWhole", M(4230000)}};
     addAccount(a);
-    a = {{"name", QCoreApplication::translate("Demo", "Home")}, {"kind", "property"}, {"openingWhole", 320000000LL}, {"myShare", 0.5}, {"sharedWithId", alex}};
+    a = {{"name", QCoreApplication::translate("Demo", "Home")}, {"kind", "property"}, {"openingWhole", M(320000000LL)}, {"myShare", 0.5}, {"sharedWithId", alex}};
     addAccount(a);
-    a = {{"name", QCoreApplication::translate("Demo", "Mortgage")}, {"kind", "mortgage"}, {"openingWhole", 240000000LL}, {"myShare", 0.5}, {"sharedWithId", alex}};
+    a = {{"name", QCoreApplication::translate("Demo", "Mortgage")}, {"kind", "mortgage"}, {"openingWhole", M(240000000LL)}, {"myShare", 0.5}, {"sharedWithId", alex}};
     addRate(addAccount(a), 3.4);
-    a = {{"name", QCoreApplication::translate("Demo", "Student loan")}, {"kind", "loan"}, {"openingWhole", 8600000}};
+    a = {{"name", QCoreApplication::translate("Demo", "Student loan")}, {"kind", "loan"}, {"openingWhole", M(8600000)}};
     addAccount(a);
 
     const QDate now = QDate::currentDate();
     const QString start = iso(now.addMonths(-3));
     struct Rep { const char *name; const char *cat; qlonglong amount; const char *freq; int day; int monthOffset; };
     const Rep reps[] = {
-        {QT_TRANSLATE_NOOP("Demo", "Rent"), "rent", 980000, "m", 25, 0},
-        {QT_TRANSLATE_NOOP("Demo", "Electricity"), "housing", 25000, "m", 12, 0},
-        {QT_TRANSLATE_NOOP("Demo", "Broadband"), "computer_phone", 39900, "m", 1, 0},
-        {QT_TRANSLATE_NOOP("Demo", "Mobile"), "computer_phone", 19900, "m", 5, 0},
-        {QT_TRANSLATE_NOOP("Demo", "Gym"), "sports", 34900, "m", 15, 0},
-        {QT_TRANSLATE_NOOP("Demo", "Car insurance"), "insurance", 126000, "q", 20, 0},
-        {QT_TRANSLATE_NOOP("Demo", "Home insurance"), "insurance", 145000, "y", 15, 1}};
+        {QT_TRANSLATE_NOOP("Demo", "Rent"), "rent", M(980000), "m", 25, 0},
+        {QT_TRANSLATE_NOOP("Demo", "Electricity"), "housing", M(25000), "m", 12, 0},
+        {QT_TRANSLATE_NOOP("Demo", "Broadband"), "computer_phone", M(39900), "m", 1, 0},
+        {QT_TRANSLATE_NOOP("Demo", "Mobile"), "computer_phone", M(19900), "m", 5, 0},
+        {QT_TRANSLATE_NOOP("Demo", "Gym"), "sports", M(34900), "m", 15, 0},
+        {QT_TRANSLATE_NOOP("Demo", "Car insurance"), "insurance", M(126000), "q", 20, 0},
+        {QT_TRANSLATE_NOOP("Demo", "Home insurance"), "insurance", M(145000), "y", 15, 1}};
     for (const Rep &r : reps) {
         QVariantMap s;
         s.insert("name", T(r.name));
@@ -472,7 +480,7 @@ void Store::seedDemo()
         s.insert("categoryId", keyedCategory(r.cat));
         addSchedule(s);
     }
-    QVariantMap move = {{"name", QCoreApplication::translate("Demo", "To the buffer")}, {"kind", "transfer"}, {"amount", 200000}, {"freq", "monthly"},
+    QVariantMap move = {{"name", QCoreApplication::translate("Demo", "To the buffer")}, {"kind", "transfer"}, {"amount", M(200000)}, {"freq", "monthly"},
                         {"day", 26}, {"startDate", start}, {"toAccountId", buffer}};
     addSchedule(move);
 
@@ -483,17 +491,17 @@ void Store::seedDemo()
         const QDate s0 = fromIso(periodInfo(shiftPeriod(cur, -k)).value("start"));
         struct Row { const char *type; qlonglong amount; int day; const char *desc; const char *cat; };
         const Row past[] = {
-            {"income", 3200000, 0, QT_TRANSLATE_NOOP("Demo", "Salary"), "salary"},
-            {"expense", 980000, 0, QT_TRANSLATE_NOOP("Demo", "Rent"), "rent"},
-            {"expense", 21000 + k * 4000, 17, QT_TRANSLATE_NOOP("Demo", "Electricity"), "housing"},
-            {"expense", 39900, 6, QT_TRANSLATE_NOOP("Demo", "Broadband"), "computer_phone"},
-            {"expense", 19900, 10, QT_TRANSLATE_NOOP("Demo", "Mobile"), "computer_phone"},
-            {"expense", 34900, 20, QT_TRANSLATE_NOOP("Demo", "Gym"), "sports"},
-            {"expense", 58000 + k * 3500, 5, QT_TRANSLATE_NOOP("Demo", "Grocery shop"), "groceries"},
-            {"expense", 61000 - k * 2500, 19, QT_TRANSLATE_NOOP("Demo", "Grocery shop"), "groceries"},
-            {"expense", 32000 + k * 6000, 12, QT_TRANSLATE_NOOP("Demo", "Restaurant"), "restaurant"},
-            {"expense", k == 2 ? 89000 : 14900, 15, QT_TRANSLATE_NOOP("Demo", "Clothes"), "clothes"},
-            {"move", 200000, 1, QT_TRANSLATE_NOOP("Demo", "To the buffer"), ""}};
+            {"income", M(3200000), 0, QT_TRANSLATE_NOOP("Demo", "Salary"), "salary"},
+            {"expense", M(980000), 0, QT_TRANSLATE_NOOP("Demo", "Rent"), "rent"},
+            {"expense", M(21000 + k * 4000), 17, QT_TRANSLATE_NOOP("Demo", "Electricity"), "housing"},
+            {"expense", M(39900), 6, QT_TRANSLATE_NOOP("Demo", "Broadband"), "computer_phone"},
+            {"expense", M(19900), 10, QT_TRANSLATE_NOOP("Demo", "Mobile"), "computer_phone"},
+            {"expense", M(34900), 20, QT_TRANSLATE_NOOP("Demo", "Gym"), "sports"},
+            {"expense", M(58000 + k * 3500), 5, QT_TRANSLATE_NOOP("Demo", "Grocery shop"), "groceries"},
+            {"expense", M(61000 - k * 2500), 19, QT_TRANSLATE_NOOP("Demo", "Grocery shop"), "groceries"},
+            {"expense", M(32000 + k * 6000), 12, QT_TRANSLATE_NOOP("Demo", "Restaurant"), "restaurant"},
+            {"expense", M(k == 2 ? 89000 : 14900), 15, QT_TRANSLATE_NOOP("Demo", "Clothes"), "clothes"},
+            {"move", M(200000), 1, QT_TRANSLATE_NOOP("Demo", "To the buffer"), ""}};
         for (const Row &r : past) {
             QVariantMap t;
             t.insert("type", r.type);
@@ -509,7 +517,7 @@ void Store::seedDemo()
     }
 
     const QDate first = fromIso(periodInfo(currentPeriod()).value("start"));
-    QVariantMap pay = {{"type", "income"}, {"amount", 3200000}, {"date", iso(first)}, {"description", QCoreApplication::translate("Demo", "Salary")},
+    QVariantMap pay = {{"type", "income"}, {"amount", M(3200000)}, {"date", iso(first)}, {"description", QCoreApplication::translate("Demo", "Salary")},
                        {"categoryId", keyedCategory("salary")}, {"isSalary", true}};
     addTransaction(pay);
     exec("DELETE FROM meta WHERE key = 'planned_through'");
@@ -522,13 +530,13 @@ void Store::seedDemo()
     };
     const int card = scalar("SELECT id FROM method ORDER BY id LIMIT 1").toInt();
     QVariantMap t;
-    t = {{"type", "expense"}, {"amount", 64200}, {"date", within(10)}, {"description", QCoreApplication::translate("Demo", "Grocery shop")},
+    t = {{"type", "expense"}, {"amount", M(64200)}, {"date", within(10)}, {"description", QCoreApplication::translate("Demo", "Grocery shop")},
          {"categoryId", keyedCategory("groceries")}, {"methodId", card}};
     addTransaction(t);
-    t = {{"type", "expense"}, {"amount", 42000}, {"amountFull", 84000}, {"date", within(7)}, {"description", QCoreApplication::translate("Demo", "Dinner")},
+    t = {{"type", "expense"}, {"amount", M(42000)}, {"amountFull", M(84000)}, {"date", within(7)}, {"description", QCoreApplication::translate("Demo", "Dinner")},
          {"categoryId", keyedCategory("restaurant")}, {"methodId", card}, {"personId", alex}};
     addTransaction(t);
-    t = {{"type", "expense"}, {"amount", 4500}, {"date", within(12)}, {"description", QCoreApplication::translate("Demo", "Coffee")},
+    t = {{"type", "expense"}, {"amount", M(4500)}, {"date", within(12)}, {"description", QCoreApplication::translate("Demo", "Coffee")},
          {"categoryId", keyedCategory("fika")}, {"methodId", card}};
     addTransaction(t);
 }
@@ -845,6 +853,8 @@ int Store::insertTxn(const QVariantMap &t, int scheduleId)
     rec.insert("origin", t.value("origin").toString().isEmpty() ? QStringLiteral("manual") : t.value("origin").toString());
     if (!t.value("notes").toString().isEmpty())
         rec.insert("notes", t.value("notes"));
+    if (!t.value("originRef").toString().isEmpty())
+        rec.insert("origin_ref", t.value("originRef"));
     if (scheduleId > 0) {
         rec.insert("schedule_id", scheduleId);
         if (t.contains("cadence"))
@@ -868,6 +878,7 @@ int Store::insertTxn(const QVariantMap &t, int scheduleId)
             return -1;
         QVariantMap in = rec;
         in.remove("schedule_id");
+        in.remove("origin_ref");
         in.insert("account_id", to);
         const qlonglong arrived = t.value("amountIn").toLongLong() > 0 ? t.value("amountIn").toLongLong() : amount;
         in.insert("amount", arrived);
@@ -1033,6 +1044,7 @@ bool Store::updateTransaction(int txnId, const QVariantMap &t)
         return false;
     }
     const QString date = t.value("date").toString().isEmpty() ? old.value("date").toString() : t.value("date").toString();
+    rememberPlannedDay(txnId);
     auto idOrNull = [&](const char *k) { return t.value(k).toInt() > 0 ? QVariant(t.value(k).toInt()) : QVariant(); };
     exec("UPDATE txn SET amount = ?, amount_full = ?, date = ?, period_id = ?, description = ?, category_id = ?, method_id = ?, "
          "context_id = ?, person_id = ?, notes = ?, updated_at = ? WHERE id = ?",
@@ -1063,6 +1075,7 @@ void Store::confirmPlanned(int txnId, const QVariantMap &c)
     if (scheduleId.isNull() && !peer.isNull())
         scheduleId = scalar("SELECT schedule_id FROM txn WHERE id = ?", {peer});
     m_db.transaction();
+    rememberPlannedDay(txnId);
     exec("UPDATE txn SET amount = ?, amount_full = ?, date = ?, period_id = ?, status = 'cleared', method_id = IFNULL(?, method_id), "
          "updated_at = ? WHERE id = ?",
          {sign * mine, full > mine ? QVariant(sign * full) : QVariant(), date, periodFor(date),
@@ -1334,10 +1347,34 @@ QList<QDate> Store::scheduleDates(const QVariantMap &s, const QDate &from, const
     return out;
 }
 
+QString Store::occurrenceRef(int scheduleId, const QString &isoDate) const
+{
+    return QStringLiteral("schedule:%1:%2").arg(scheduleId).arg(isoDate);
+}
+
+// A planned row about to move to another day keeps the day it was planned for,
+// so planning ahead does not write that day again. Rows planned before this was
+// stored learn it here, the first time they move.
+void Store::rememberPlannedDay(int txnId)
+{
+    const QVariantList r = rows("SELECT schedule_id, date, origin_ref FROM txn WHERE id = ?", {txnId});
+    if (r.isEmpty())
+        return;
+    const QVariantMap t = r.first().toMap();
+    if (t.value("schedule_id").isNull() || !t.value("origin_ref").isNull())
+        return;
+    const QString ref = occurrenceRef(t.value("schedule_id").toInt(), t.value("date").toString());
+    if (!scalar("SELECT id FROM txn WHERE origin_ref = ?", {ref}).isValid())
+        exec("UPDATE txn SET origin_ref = ? WHERE id = ?", {ref, txnId});
+}
+
 int Store::writePlanned(const QVariantMap &s, const QDate &date)
 {
-    // Once written, never again for that date: also not when it was skipped.
-    if (scalar("SELECT id FROM txn WHERE schedule_id = ? AND date = ? AND parent_id IS NULL", {s.value("id"), iso(date)}).isValid())
+    // Once written, never again for that date: also not when it was skipped, and
+    // not when it was confirmed on another day (the row remembers its planned day).
+    const QString ref = occurrenceRef(s.value("id").toInt(), iso(date));
+    if (scalar("SELECT id FROM txn WHERE schedule_id = ? AND parent_id IS NULL AND (date = ? OR origin_ref = ?)",
+               {s.value("id"), iso(date), ref}).isValid())
         return 0;
     const QString kind = s.value("kind").toString();
     QVariantMap t;
@@ -1351,6 +1388,7 @@ int Store::writePlanned(const QVariantMap &s, const QDate &date)
     t.insert("methodId", s.value("method_id"));
     t.insert("cadence", s.value("freq"));
     t.insert("origin", "schedule");
+    t.insert("originRef", ref);
     if (kind == "transfer") {
         const int pot = potId();
         t.insert("fromAccountId", s.value("account_id").toInt() == pot ? 0 : s.value("account_id").toInt());
@@ -1682,14 +1720,16 @@ int Store::addLoan(const QVariantMap &l)
     return id;
 }
 
-// The app has drifted from the real balance of a savings account or a loan. One
-// row on that account closes the gap. It has no category and no peer, so it is
-// neither income, spending nor saving. For a debt, the figure is what is owed.
+// The app has drifted from the real balance of an account. On an account kept by
+// its rows, one row closes the gap: no category and no peer, so it is neither
+// income, spending nor saving. On an account kept by values, today's value is the
+// correction. For a debt the figure is what is owed; for a person it is signed,
+// positive when they owe you.
 bool Store::correctBalance(int accountId, qlonglong trueWhole)
 {
     const QVariantMap a = account(accountId);
     const QString kind = a.value("kind").toString();
-    if (a.isEmpty() || a.value("balance_source").toString() != "ledger" || kind == "person")
+    if (a.isEmpty())
         return false;
     const double share = a.value("my_share").toDouble();
     const qlonglong mine = qRound64(trueWhole * (share > 0 ? share : 1.0));
@@ -1697,6 +1737,10 @@ bool Store::correctBalance(int accountId, qlonglong trueWhole)
     const qlonglong delta = target - a.value("value").toLongLong();
     if (delta == 0)
         return false;
+    if (a.value("balance_source").toString() == "valuation") {
+        addValuation(accountId, trueWhole, today());
+        return true;
+    }
     const QString date = today();
     QVariantMap rec;
     rec.insert("account_id", accountId);

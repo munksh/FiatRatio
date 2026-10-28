@@ -137,77 +137,77 @@
 <context>
     <name>AccountPage</name>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="58"/>
+        <location filename="../qml/pages/AccountPage.qml" line="61"/>
         <source>your %1 of %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="59"/>
+        <location filename="../qml/pages/AccountPage.qml" line="62"/>
         <source>with %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="60"/>
+        <location filename="../qml/pages/AccountPage.qml" line="63"/>
         <source>%1 % interest</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="61"/>
+        <location filename="../qml/pages/AccountPage.qml" line="64"/>
         <source>value from %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="72"/>
+        <location filename="../qml/pages/AccountPage.qml" line="75"/>
         <source>a new value</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="80"/>
+        <location filename="../qml/pages/AccountPage.qml" line="83"/>
         <source>the interest changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="83"/>
+        <location filename="../qml/pages/AccountPage.qml" line="86"/>
         <source>interest</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="83"/>
+        <location filename="../qml/pages/AccountPage.qml" line="86"/>
         <source>Interest, % a year</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="90"/>
+        <location filename="../qml/pages/AccountPage.qml" line="93"/>
         <source>pay something off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="90"/>
+        <location filename="../qml/pages/AccountPage.qml" line="93"/>
         <source>move money here</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="96"/>
+        <location filename="../qml/pages/AccountPage.qml" line="98"/>
         <source>correct the balance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="104"/>
+        <location filename="../qml/pages/AccountPage.qml" line="107"/>
         <source>close it</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="106"/>
+        <location filename="../qml/pages/AccountPage.qml" line="109"/>
         <source>Closing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="119"/>
+        <location filename="../qml/pages/AccountPage.qml" line="122"/>
         <source>Moves</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AccountPage.qml" line="125"/>
+        <location filename="../qml/pages/AccountPage.qml" line="128"/>
         <source>balance correction</source>
         <translation type="unfinished"></translation>
     </message>
@@ -872,37 +872,62 @@
 <context>
     <name>BalanceDialog</name>
     <message>
-        <location filename="../qml/pages/BalanceDialog.qml" line="50"/>
+        <location filename="../qml/pages/BalanceDialog.qml" line="54"/>
         <source>Total</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BalanceDialog.qml" line="50"/>
+        <location filename="../qml/pages/BalanceDialog.qml" line="54"/>
         <source>Owed today</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BalanceDialog.qml" line="50"/>
+        <location filename="../qml/pages/BalanceDialog.qml" line="54"/>
         <source>Balance today</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/BalanceDialog.qml" line="54"/>
+        <source>Worth today</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BalanceDialog.qml" line="58"/>
         <source>Your part (%1): %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BalanceDialog.qml" line="64"/>
+        <location filename="../qml/pages/BalanceDialog.qml" line="65"/>
+        <source>they owe me</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BalanceDialog.qml" line="65"/>
+        <source>I owe them</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BalanceDialog.qml" line="77"/>
+        <source>Write what it is worth today.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BalanceDialog.qml" line="78"/>
         <source>Write what the account really holds. The app saves the difference as a balance correction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BalanceDialog.qml" line="66"/>
+        <location filename="../qml/pages/BalanceDialog.qml" line="80"/>
         <source>Already right. Nothing to correct.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/BalanceDialog.qml" line="67"/>
+        <location filename="../qml/pages/BalanceDialog.qml" line="81"/>
+        <source>Difference: %1. Saved as today&apos;s value.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BalanceDialog.qml" line="82"/>
         <source>Difference: %1. Saved as a balance correction. It does not count as income or saving.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1237,121 +1262,126 @@
 <context>
     <name>Demo</name>
     <message>
-        <location filename="../src/store.cpp" line="434"/>
+        <location filename="../src/store.cpp" line="440"/>
         <source>Card</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="434"/>
+        <location filename="../src/store.cpp" line="441"/>
         <source>Swish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="434"/>
+        <location filename="../src/store.cpp" line="441"/>
+        <source>Transfer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/store.cpp" line="442"/>
         <source>Cash</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="441"/>
+        <location filename="../src/store.cpp" line="449"/>
         <source>Buffer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="443"/>
+        <location filename="../src/store.cpp" line="451"/>
         <source>Funds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="445"/>
+        <location filename="../src/store.cpp" line="453"/>
         <source>Home</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="447"/>
+        <location filename="../src/store.cpp" line="455"/>
         <source>Mortgage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="449"/>
+        <location filename="../src/store.cpp" line="457"/>
         <source>Student loan</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="456"/>
-        <location filename="../src/store.cpp" line="487"/>
+        <location filename="../src/store.cpp" line="464"/>
+        <location filename="../src/store.cpp" line="495"/>
         <source>Rent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="457"/>
-        <location filename="../src/store.cpp" line="488"/>
+        <location filename="../src/store.cpp" line="465"/>
+        <location filename="../src/store.cpp" line="496"/>
         <source>Electricity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="458"/>
-        <location filename="../src/store.cpp" line="489"/>
+        <location filename="../src/store.cpp" line="466"/>
+        <location filename="../src/store.cpp" line="497"/>
         <source>Broadband</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="459"/>
-        <location filename="../src/store.cpp" line="490"/>
+        <location filename="../src/store.cpp" line="467"/>
+        <location filename="../src/store.cpp" line="498"/>
         <source>Mobile</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="460"/>
-        <location filename="../src/store.cpp" line="491"/>
+        <location filename="../src/store.cpp" line="468"/>
+        <location filename="../src/store.cpp" line="499"/>
         <source>Gym</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="461"/>
+        <location filename="../src/store.cpp" line="469"/>
         <source>Car insurance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="462"/>
+        <location filename="../src/store.cpp" line="470"/>
         <source>Home insurance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="475"/>
-        <location filename="../src/store.cpp" line="496"/>
+        <location filename="../src/store.cpp" line="483"/>
+        <location filename="../src/store.cpp" line="504"/>
         <source>To the buffer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="486"/>
-        <location filename="../src/store.cpp" line="512"/>
+        <location filename="../src/store.cpp" line="494"/>
+        <location filename="../src/store.cpp" line="520"/>
         <source>Salary</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="492"/>
-        <location filename="../src/store.cpp" line="493"/>
-        <location filename="../src/store.cpp" line="525"/>
+        <location filename="../src/store.cpp" line="500"/>
+        <location filename="../src/store.cpp" line="501"/>
+        <location filename="../src/store.cpp" line="533"/>
         <source>Grocery shop</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="494"/>
+        <location filename="../src/store.cpp" line="502"/>
         <source>Restaurant</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="495"/>
+        <location filename="../src/store.cpp" line="503"/>
         <source>Clothes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="528"/>
+        <location filename="../src/store.cpp" line="536"/>
         <source>Dinner</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/store.cpp" line="531"/>
+        <location filename="../src/store.cpp" line="539"/>
         <source>Coffee</source>
         <translation type="unfinished"></translation>
     </message>

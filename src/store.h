@@ -137,7 +137,7 @@ private:
     bool openFile(const QString &fileName);
     bool runSchema();
     bool migrate(const QString &fileName);
-    void seedDemo();
+    void seedDemo(const QString &currency);
     QString categoryName(const QString &key, const QString &name) const;
     QString bucketName(const QString &key, const QString &name) const;
     QDate predictedStart(const QString &periodId);
@@ -153,6 +153,8 @@ private:
     int scheduleFromTxn(const QVariantMap &t, const QString &repeat);
     QList<QDate> scheduleDates(const QVariantMap &s, const QDate &from, const QDate &to);
     int writePlanned(const QVariantMap &s, const QDate &date);
+    QString occurrenceRef(int scheduleId, const QString &isoDate) const;
+    void rememberPlannedDay(int txnId);
     int planInto(const QString &periodId, bool onlyRare, const QDate &notBefore);
     void dropFuturePlanned(int scheduleId, const QDate &after);
     void deleteTxnPair(int txnId);

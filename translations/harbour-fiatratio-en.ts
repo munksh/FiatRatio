@@ -719,6 +719,26 @@
         <source>Difference: %1. Saved as a balance correction. It does not count as income or saving.</source>
         <translation>Difference: %1. Saved as a balance correction. It does not count as income or saving.</translation>
     </message>
+    <message>
+        <source>Worth today</source>
+        <translation>Worth today</translation>
+    </message>
+    <message>
+        <source>they owe me</source>
+        <translation>they owe me</translation>
+    </message>
+    <message>
+        <source>I owe them</source>
+        <translation>I owe them</translation>
+    </message>
+    <message>
+        <source>Write what it is worth today.</source>
+        <translation>Write what it is worth today.</translation>
+    </message>
+    <message>
+        <source>Difference: %1. Saved as today&apos;s value.</source>
+        <translation>Difference: %1. Saved as today&apos;s value.</translation>
+    </message>
 </context>
 <context>
     <name>BreakdownPage</name>
@@ -989,91 +1009,95 @@
     <name>Demo</name>
     <message>
         <source>Card</source>
-        <translation type="unfinished"></translation>
+        <translation>Card</translation>
     </message>
     <message>
         <source>Swish</source>
-        <translation type="unfinished"></translation>
+        <translation>Swish</translation>
+    </message>
+    <message>
+        <source>Transfer</source>
+        <translation>Transfer</translation>
     </message>
     <message>
         <source>Cash</source>
-        <translation type="unfinished"></translation>
+        <translation>Cash</translation>
     </message>
     <message>
         <source>Buffer</source>
-        <translation type="unfinished"></translation>
+        <translation>Buffer</translation>
     </message>
     <message>
         <source>Funds</source>
-        <translation type="unfinished"></translation>
+        <translation>Funds</translation>
     </message>
     <message>
         <source>Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Home</translation>
     </message>
     <message>
         <source>Mortgage</source>
-        <translation type="unfinished"></translation>
+        <translation>Mortgage</translation>
     </message>
     <message>
         <source>Student loan</source>
-        <translation type="unfinished"></translation>
+        <translation>Student loan</translation>
     </message>
     <message>
         <source>Rent</source>
-        <translation type="unfinished"></translation>
+        <translation>Rent</translation>
     </message>
     <message>
         <source>Electricity</source>
-        <translation type="unfinished"></translation>
+        <translation>Electricity</translation>
     </message>
     <message>
         <source>Broadband</source>
-        <translation type="unfinished"></translation>
+        <translation>Broadband</translation>
     </message>
     <message>
         <source>Mobile</source>
-        <translation type="unfinished"></translation>
+        <translation>Mobile</translation>
     </message>
     <message>
         <source>Gym</source>
-        <translation type="unfinished"></translation>
+        <translation>Gym</translation>
     </message>
     <message>
         <source>Car insurance</source>
-        <translation type="unfinished"></translation>
+        <translation>Car insurance</translation>
     </message>
     <message>
         <source>Home insurance</source>
-        <translation type="unfinished"></translation>
+        <translation>Home insurance</translation>
     </message>
     <message>
         <source>To the buffer</source>
-        <translation type="unfinished"></translation>
+        <translation>To the buffer</translation>
     </message>
     <message>
         <source>Salary</source>
-        <translation type="unfinished"></translation>
+        <translation>Salary</translation>
     </message>
     <message>
         <source>Grocery shop</source>
-        <translation type="unfinished"></translation>
+        <translation>Grocery shop</translation>
     </message>
     <message>
         <source>Restaurant</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurant</translation>
     </message>
     <message>
         <source>Clothes</source>
-        <translation type="unfinished"></translation>
+        <translation>Clothes</translation>
     </message>
     <message>
         <source>Dinner</source>
-        <translation type="unfinished"></translation>
+        <translation>Dinner</translation>
     </message>
     <message>
         <source>Coffee</source>
-        <translation type="unfinished"></translation>
+        <translation>Coffee</translation>
     </message>
 </context>
 <context>
